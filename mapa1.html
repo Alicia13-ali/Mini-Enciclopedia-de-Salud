@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa del Cuerpo Humano | Mini Enciclopedia de Salud</title>
+</head>
+<body>
+    <header>
+        <h1>Mapa del Cuerpo Humano</h1>
+        <p>Haz clic en las distintas partes del cuerpo para obtener información sobre cada área.</p>
+    </header>
+
+    <main>
+        <!-- Imagen del cuerpo humano -->
+        <img src="cuerpo_humano.png" usemap="#cuerpo" alt="Mapa del cuerpo humano con partes activas" width="500">
+
+        <!-- Mapa de imagen -->
+        <map name="cuerpo">
+            <area shape="rect" coords="200,20,300,120" href="cabeza.html" alt="Cabeza: información sobre salud cerebral">
+            <area shape="rect" coords="180,130,320,280" href="torso.html" alt="Torso: información sobre el pecho y abdomen">
+            <area shape="circle" coords="140,180,40" href="brazo_izquierdo.html" alt="Brazo izquierdo">
+            <area shape="circle" coords="360,180,40" href="brazo_derecho.html" alt="Brazo derecho">
+            <area shape="poly" coords="180,280,320,280,300,450,200,500" href="piernas.html" alt="Piernas: información sobre las extremidades inferiores">
+            
+        </map>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mini Enciclopedia de Salud | <a href="index.html">Inicio</a></p>
+    </footer>
+</body>
+</html>
+
