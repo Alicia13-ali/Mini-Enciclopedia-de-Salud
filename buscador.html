@@ -19,46 +19,49 @@
     <p>Complete los campos para realizar su búsqueda.</p>
 
     <form action="respuesta_buscador.html" method="get">
+
+      <!-- Información general -->
       <label for="descripcion">Descripción (*)</label><br>
       <input type="text" id="descripcion" name="descripcion" required><br><br>
 
       <label for="causas">Causas:</label><br>
-      <input type="text" id="causas" name="causas"><br>
-	  <br>
+      <input type="text" id="causas" name="causas"><br><br>
 
-      
-        <legend>Síntomas:</legend>
-        <select id="sintomas" name="sintomas" multiple size="4">
-          <option value="fiebre">Fiebre</option>
-          <option value="vomito">Vómito</option>
-          <option value="diarrea">Diarrea</option>
-          <option value="dolor_muscular">Dolor muscular</option>
-        </select>
+      <!-- Síntomas -->
+      <label>Síntomas (puede seleccionar varios):</label><br>
+		<input type="checkbox" name="sintomas" value="fiebre"> Fiebre<br>
+		<input type="checkbox" name="sintomas" value="vomito"> Vómito<br>
+		<input type="checkbox" name="sintomas" value="diarrea"> Diarrea<br>
+		<input type="checkbox" name="sintomas" value="dolor_muscular"> Dolor muscular<br>
+
       <br><br>
 
-      
-        <legend>Pruebas y exámenes:</legend>
-        <select id="pruebas" name="pruebas" multiple size="5">
-          <option value="analisis">Análisis de sangre</option>
-          <option value="ecografia">Ecografía</option>
-          <option value="radiografia">Radiografía</option>
-          <option value="tomografia">Tomografía</option>
-          <option value="ultrasonido">Ultrasonido</option>
-        </select>
+      <!-- Pruebas y exámenes -->
+      <label for="pruebas">Pruebas y exámenes (puede seleccionar varios):</label><br>
+      <select id="pruebas" name="pruebas" multiple size="5">
+        <option value="analisis">Análisis de sangre</option>
+        <option value="ecografia">Ecografía</option>
+        <option value="radiografia">Radiografía</option>
+        <option value="tomografia">Tomografía</option>
+        <option value="ultrasonido">Ultrasonido</option>
+      </select>
       <br><br>
 
+      <!-- Tratamiento -->
       <label for="tratamiento">Tratamiento:</label><br>
       <input type="text" id="tratamiento" name="tratamiento"><br><br>
 
+      <!-- Expectativas -->
       <fieldset>
-        <legend>Expectativas:</legend>
+        <legend>Expectativas</legend>
         <input type="radio" id="negativas" name="expectativas" value="negativas">
         <label for="negativas">Negativas</label><br>
         <input type="radio" id="sindefinir" name="expectativas" value="sindefinir">
         <label for="sindefinir">Sin definir</label><br>
         <input type="radio" id="positivas" name="expectativas" value="positivas">
         <label for="positivas">Positivas</label>
-      </fieldset><br>
+      </fieldset>
+      <br>
 
       <button type="submit">Buscar</button>
     </form>
