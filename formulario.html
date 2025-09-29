@@ -3,22 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Salud</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        label {
-            font-weight: bold;
-        }
-        .ayuda {
-            font-size: 0.9em;
-            color: #555;
-        }
-        .campo-obligatorio {
-            color: red;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -26,46 +10,46 @@
     </header>
 
     <main>
-        <p>Los campos marcados con <span class="campo-obligatorio">(*)</span> son obligatorios.</p>
+        <p>Los campos marcados con (*)son obligatorios.</p>
 
         <form action="respuesta_formulario.html" method="get">
 
-            <!-- Nombre -->
+
             <label for="nombre">Nombre completo <span class="campo-obligatorio">(*)</span></label><br>
             <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez"><br>
             <span class="ayuda">Introduce tu nombre y apellido.</span><br><br>
 
-            <!-- Correo electrónico -->
+
             <label for="email">Correo electrónico <span class="campo-obligatorio">(*)</span></label><br>
             <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com"><br>
             <span class="ayuda">Debe ser un correo válido, por ejemplo: usuario@gmail.com</span><br><br>
 
-            <!-- Fecha de nacimiento -->
+          
             <label for="nacimiento">Fecha de nacimiento <span class="campo-obligatorio">(*)</span></label><br>
             <input type="date" id="nacimiento" name="nacimiento" required><br>
             <span class="ayuda">Selecciona tu fecha de nacimiento.</span><br><br>
 
-            <!-- Altura -->
+            
             <label for="altura">Altura (cm)</label><br>
             <input type="number" id="altura" name="altura" min="50" max="250" step="1" placeholder="Ej: 170"><br>
             <span class="ayuda">Introduce tu altura en centímetros (50-250 cm).</span><br><br>
 
-            <!-- Peso -->
+            
             <label for="peso">Peso (kg)</label><br>
             <input type="number" id="peso" name="peso" min="30" max="200" step="0.1" placeholder="Ej: 70.5"><br>
             <span class="ayuda">Introduce tu peso en kilogramos (30-200 kg).</span><br><br>
 
-            <!-- Color favorito -->
+            
             <label for="color">Color favorito</label><br>
             <input type="color" id="color" name="color" value="#ff0000"><br>
             <span class="ayuda">Selecciona tu color favorito.</span><br><br>
 
-            <!-- Nivel de actividad -->
+            
             <label for="actividad">Nivel de actividad (1-10)</label><br>
             <input type="range" id="actividad" name="actividad" min="1" max="10" step="1" value="5"><br>
             <span class="ayuda">Indica tu nivel de actividad física en una escala del 1 al 10.</span><br><br>
 
-            <!-- Código postal -->
+            
             <label for="codigo">Código postal</label><br>
             <input type="text" id="codigo" name="codigo" pattern="\d{5}" placeholder="Ej: 28001"><br>
             <span class="ayuda">Introduce un código postal de 5 dígitos.</span><br><br>
