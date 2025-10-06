@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de Accesibilidad - Mini Enciclopedia de Salud</title>
+   
+</head>
+<body>
+    <header>
+        <h1>Mini Enciclopedia de Salud</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="buscador.html">Buscador</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Compromiso de accesibilidad</h2>
+            <p>Este sitio web se ha diseñado y desarrollado para ser accesible y usable para todas las personas, incluyendo aquellas con discapacidad visual, auditiva, física, cognitiva o neurológica. Se siguen las pautas del <strong>WCAG 2.1</strong> y se busca cumplir, en la medida de lo posible, con el nivel AA de conformidad.</p>
+        </section>
+
+        <section>
+            <h2>Identificación del idioma principal</h2>
+            <p>El idioma principal de este sitio web es el español (<code>&lt;html lang="es"&gt;</code>), garantizando la correcta lectura por lectores de pantalla y motores de traducción. En caso de cambios de idioma, se utiliza <code>&lt;span lang="en"&gt;</code> u otros atributos de idioma correspondientes.</p>
+        </section>
+
+        <section>
+            <h2>Etiquetado semántico</h2>
+            <p>Se utiliza HTML5 semántico para estructurar la página, incluyendo:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code> para la cabecera.</li>
+                <li><code>&lt;nav&gt;</code> para la navegación principal.</li>
+                <li><code>&lt;main&gt;</code> para el contenido principal.</li>
+                <li><code>&lt;aside&gt;</code> para información complementaria.</li>
+                <li><code>&lt;article&gt;</code> y <code>&lt;section&gt;</code> para organizar el contenido en secciones y subsecciones.</li>
+                <li><code>&lt;footer&gt;</code> para el pie de página.</li>
+            </ul>
+            <p>Los encabezados (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) se usan de manera jerárquica y significativa.</p>
+        </section>
+
+        <section>
+            <h2>Texto alternativo en imágenes</h2>
+            <p>Todas las imágenes contienen atributos <code>alt</code> que describen su función o contenido. Las imágenes decorativas usan <code>alt=""</code>. Para imágenes complejas se emplean descripciones detalladas (<code>longdesc</code> si fuera necesario).</p>
+        </section>
+
+        <section>
+            <h2>Mecanismos de navegación</h2>
+            <p>El sitio incluye múltiples mecanismos para facilitar la navegación:</p>
+            <ul>
+                <li>Mapa del sitio textual y visual.</li>
+                <li>Migas de pan (breadcrumbs) que muestran la ruta desde la página principal.</li>
+                <li>Enlaces claros y agrupados en listas para facilitar la localización de contenido.</li>
+                <li>Navegación completamente funcional mediante teclado.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Otras características de accesibilidad implementadas</h2>
+            <ul>
+                <li>Contraste adecuado entre texto y fondo, verificado con herramientas de comprobación.</li>
+                <li>Textos fragmentados en párrafos cortos y secciones claras para mejorar la comprensión.</li>
+                <li>Formularios accesibles con etiquetas <code>&lt;label&gt;</code>, agrupados en <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code>.</li>
+                <li>Evitar la transmisión de información solo mediante color o elementos visuales.</li>
+                <li>Consistencia en estructura y navegación en todas las páginas.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conformidad y limitaciones</h2>
+            <p>Este sitio web es <strong>parcialmente conforme con el nivel AA de las WCAG 2.1</strong>, debido a algunas excepciones técnicas y contenido de terceros que todavía no cumple completamente con todos los criterios de accesibilidad.</p>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+            <p>Si detecta problemas de accesibilidad, puede contactar con nosotros en: <a href="mailto:imdc2@alu.ua.es">imdc2@alu.ua.es</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Autores: Alicia y Ivy</p>
+        <p>&copy; 2025 Mini Enciclopedia de Salud</p>
+    </footer>
+</body>
+</html>
