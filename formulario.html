@@ -7,11 +7,11 @@
 <body>
     <header>
         <h1>Formulario de Salud</h1>
-		<nav>
-		<a href="index.html">Inicio</a> |
-		<a href="contacto.html">Contacto</a> |
-		<a href="buscador.html">Buscador</a>
-    </nav>
+        <nav>
+            <a href="index.html">Inicio</a> |
+            <a href="contacto.html">Contacto</a> |
+            <a href="buscador.html">Buscador</a>
+        </nav>
     </header>
 
     <main>
@@ -19,44 +19,59 @@
 
         <form action="respuesta_formulario.html" method="get">
 
-
-            <label for="nombre">Nombre completo (*)</span></label><br>
-            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Alicia Moreno "><br>
+            <label for="nombre">Nombre completo (*)</label><br>
+            <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                required 
+                placeholder="Ej: Alicia Moreno"
+                pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,40}"
+                title="Solo letras y espacios (mínimo 3 caracteres)">
+            <br>
             <span class="ayuda">Introduce tu nombre y apellido.</span><br><br>
 
-
-            <label for="email">Correo electrónico (*)</span></label><br>
-            <input type="email" id="email" name="email" required placeholder="alme2@alu.ua.es"><br>
+            <label for="email">Correo electrónico (*)</label><br>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder="alme2@alu.ua.es"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                title="Introduce un correo válido (ejemplo@dominio.com)">
+            <br>
             <span class="ayuda">Debe ser un correo válido</span><br><br>
 
-          
-            <label for="nacimiento">Fecha de nacimiento (*)</span></label><br>
+            <label for="nacimiento">Fecha de nacimiento (*)</label><br>
             <input type="date" id="nacimiento" name="nacimiento" required><br>
             <span class="ayuda">Selecciona tu fecha de nacimiento.</span><br><br>
 
-            
             <label for="altura">Altura (cm)</label><br>
             <input type="number" id="altura" name="altura" min="50" max="250" step="1" placeholder="Ej: 170"><br>
             <span class="ayuda">Introduce tu altura en centímetros (50-250 cm).</span><br><br>
 
-            
             <label for="peso">Peso (kg)</label><br>
             <input type="number" id="peso" name="peso" min="30" max="200" step="1" placeholder="Ej: 70.5"><br>
             <span class="ayuda">Introduce tu peso en kilogramos (30-200 kg).</span><br><br>
 
-            
             <label for="color">Color favorito</label><br>
             <input type="color" id="color" name="color" value="#ff007f"><br>
             <span class="ayuda">Selecciona tu color favorito.</span><br><br>
 
-            
             <label for="actividad">Nivel de actividad (1-10)</label><br>
             <input type="range" id="actividad" name="actividad" min="1" max="10" step="1" value="5"><br>
             <span class="ayuda">Indica tu nivel de actividad física en una escala del 1 al 10.</span><br><br>
 
-            
             <label for="codigo">Código postal</label><br>
-            <input type="text" id="codigo" name="codigo" pattern="\d{5}" placeholder="Ej: 28001"><br>
+            <input 
+                type="text" 
+                id="codigo" 
+                name="codigo" 
+                pattern="\d{5}" 
+                placeholder="Ej: 28001"
+                title="Debe tener exactamente 5 dígitos numéricos">
+            <br>
             <span class="ayuda">Introduce un código postal de 5 dígitos.</span><br><br>
 
             <button type="submit">Enviar</button>
