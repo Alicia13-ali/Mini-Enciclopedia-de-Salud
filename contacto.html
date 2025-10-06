@@ -20,10 +20,10 @@
 
     <form action="respuesta_contacto.html" method="get">
       <label for="asunto">Asunto (*)</label><br>
-      <input type="text" id="asunto" name="asunto" required><br><br>
+      <input type="text" id="asunto" name="asunto" required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"><br><br>
 
       <label for="comentario">Comentario o pregunta (*)</label><br>
-      <textarea id="comentario" name="comentario" rows="4" cols="40" required></textarea><br><br>
+      <textarea id="comentario" name="comentario" rows="4" cols="40" required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ0-9.,;:!?() ]+"></textarea><br><br>
 
       <label for="perfil">Yo soy:</label><br>
       <select id="perfil" name="perfil">
