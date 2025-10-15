@@ -11,6 +11,7 @@
       <a href="index.html">Inicio</a> |
       <a href="contacto.html">Contacto</a> |
       <a href="buscador.html">Buscador</a>
+	  <a href="mapa_sitio.html">Mapa del sitio</a>
     </nav>
   </header>
 
@@ -20,12 +21,14 @@
 
     <form action="respuesta_buscador.html" method="get">
 
+      <!-- Información general -->
       <label for="descripcion">Descripción (*)</label><br>
-      <input type="text" id="descripcion" name="descripcion" required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"><br><br>
+      <input type="text" id="descripcion" name="descripcion" required><br><br>
 
       <label for="causas">Causas:</label><br>
-      <input type="text" id="causas" name="causas" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"><br><br>
+      <input type="text" id="causas" name="causas"><br><br>
 
+      <!-- Síntomas -->
       <label>Síntomas (puede seleccionar varios):</label><br>
 		<input type="checkbox" name="sintomas" value="fiebre"> Fiebre<br>
 		<input type="checkbox" name="sintomas" value="vomito"> Vómito<br>
@@ -34,6 +37,7 @@
 
       <br><br>
 
+      <!-- Pruebas y exámenes -->
       <label for="pruebas">Pruebas y exámenes (puede seleccionar varios):</label><br>
       <select id="pruebas" name="pruebas" multiple size="5">
         <option value="analisis">Análisis de sangre</option>
@@ -44,9 +48,11 @@
       </select>
       <br><br>
 
+      <!-- Tratamiento -->
       <label for="tratamiento">Tratamiento:</label><br>
       <input type="text" id="tratamiento" name="tratamiento"><br><br>
 
+      <!-- Expectativas -->
       <fieldset>
         <legend>Expectativas</legend>
         <input type="radio" id="negativas" name="expectativas" value="negativas">

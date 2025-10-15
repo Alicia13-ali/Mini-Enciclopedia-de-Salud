@@ -1,69 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto - Mini Enciclopedia de Salud</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de Accesibilidad - Mini Enciclopedia de Salud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, footer {
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        nav a {
+            margin-right: 15px;
+            color: #00529B;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #00529B;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Mini Enciclopedia de Salud</h1>
-    <nav>
-      <a href="index.html">Inicio</a> |
-      <a href="contacto.html">Contacto</a> |
-      <a href="buscador.html">Buscador</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Mini Enciclopedia de Salud</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="buscador.html">Buscador</a>
+            <a href="accesibilidad.html">Accesibilidad</a>
+			<a href="mapa_sitio.html">Mapa del sitio</a>
+        </nav>
+    </header>
 
-  <main>
-    <h2>Formulario de Contacto</h2>
-    <p>Por favor complete los campos obligatorios marcados como <strong>(*)</strong>.</p>
+    <main>
+        <section>
+            <h2>Compromiso de accesibilidad</h2>
+            <p>Este sitio web se ha diseñado y desarrollado para ser accesible y usable para todas las personas, incluyendo aquellas con discapacidad visual, auditiva, física, cognitiva o neurológica. Se siguen las pautas del <strong>WCAG 2.1</strong> y se busca cumplir, en la medida de lo posible, con el nivel AA de conformidad.</p>
+        </section>
 
-    <form action="respuesta_contacto.html" method="get">
-      <label for="asunto">Asunto (*)</label><br>
-      <input type="text" id="asunto" name="asunto" required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"><br><br>
+        <section>
+            <h2>Identificación del idioma principal</h2>
+            <p>El idioma principal de este sitio web es el español (<code>&lt;html lang="es"&gt;</code>), garantizando la correcta lectura por lectores de pantalla y motores de traducción. En caso de cambios de idioma, se utiliza <code>&lt;span lang="en"&gt;</code> u otros atributos de idioma correspondientes.</p>
+        </section>
 
-      <label for="comentario">Comentario o pregunta (*)</label><br>
-      <textarea id="comentario" name="comentario" rows="4" cols="40" required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ0-9.,;:!?() ]+"></textarea><br><br>
+        <section>
+            <h2>Etiquetado semántico</h2>
+            <p>Se utiliza HTML5 semántico para estructurar la página, incluyendo:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code> para la cabecera.</li>
+                <li><code>&lt;nav&gt;</code> para la navegación principal.</li>
+                <li><code>&lt;main&gt;</code> para el contenido principal.</li>
+                <li><code>&lt;aside&gt;</code> para información complementaria.</li>
+                <li><code>&lt;article&gt;</code> y <code>&lt;section&gt;</code> para organizar el contenido en secciones y subsecciones.</li>
+                <li><code>&lt;footer&gt;</code> para el pie de página.</li>
+            </ul>
+            <p>Los encabezados (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) se usan de manera jerárquica y significativa.</p>
+        </section>
 
-      <label for="perfil">Yo soy:</label><br>
-      <select id="perfil" name="perfil">
-        <option value="paciente">Paciente</option>
-        <option value="cientifico">Científico</option>
-        <option value="medico">Médico</option>
-        <option value="educador">Educador</option>
-        <option value="fabricante">Fabricante</option>
-        <option value="periodista">Periodista</option>
-      </select><br><br>
+        <section>
+            <h2>Texto alternativo en imágenes</h2>
+            <p>Todas las imágenes contienen atributos <code>alt</code> que describen su función o contenido. Las imágenes decorativas usan <code>alt=""</code>. Para imágenes complejas se emplean descripciones detalladas (<code>longdesc</code> si fuera necesario).</p>
+        </section>
 
-      <label for="nacimiento">Fecha de nacimiento:</label><br>
-      <input type="date" id="nacimiento" name="nacimiento"><br><br>
+        <section>
+            <h2>Mecanismos de navegación</h2>
+            <p>El sitio incluye múltiples mecanismos para facilitar la navegación:</p>
+            <ul>
+                <li>Mapa del sitio textual y visual.</li>
+                <li>Migas de pan (breadcrumbs) que muestran la ruta desde la página principal.</li>
+                <li>Enlaces claros y agrupados en listas para facilitar la localización de contenido.</li>
+                <li>Navegación completamente funcional mediante teclado.</li>
+            </ul>
+        </section>
 
-      <fieldset>
-        <legend>Sexo:</legend>
-        <input type="radio" id="hombre" name="sexo" value="hombre">
-        <label for="hombre">Hombre</label><br>
-        <input type="radio" id="mujer" name="sexo" value="mujer">
-        <label for="mujer">Mujer</label><br>
-        <input type="radio" id="otro" name="sexo" value="otro">
-        <label for="otro">Otro</label>
-      </fieldset><br>
+        <section>
+            <h2>Otras características de accesibilidad implementadas</h2>
+            <ul>
+                <li>Contraste adecuado entre texto y fondo, verificado con herramientas de comprobación.</li>
+                <li>Textos fragmentados en párrafos cortos y secciones claras para mejorar la comprensión.</li>
+                <li>Formularios accesibles con etiquetas <code>&lt;label&gt;</code>, agrupados en <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code>.</li>
+                <li>Evitar la transmisión de información solo mediante color o elementos visuales.</li>
+                <li>Consistencia en estructura y navegación en todas las páginas.</li>
+            </ul>
+        </section>
 
-      <label for="correo">Correo electrónico:</label><br>
-      <input type="email" id="correo" name="correo"><br><br>
+        <section>
+            <h2>Conformidad y limitaciones</h2>
+            <p>Este sitio web es <strong>parcialmente conforme con el nivel AA de las WCAG 2.1</strong>, debido a algunas excepciones técnicas y contenido de terceros que todavía no cumple completamente con todos los criterios de accesibilidad.</p>
+        </section>
 
-      
-        <h3>Preferencias:</h3>
-        <input type="checkbox" id="informacion" name="informacion">
-        <label for="informacion">Deseo recibir más información</label>
-      <br><br>
+        <section>
+            <h2>Contacto</h2>
+            <p>Si detecta problemas de accesibilidad, puede contactar con nosotros en: <a href="mailto:accesibilidad@ejemplo.com">accesibilidad@ejemplo.com</a>.</p>
+        </section>
+    </main>
 
-      <button type="submit">Enviar consulta</button>
-    </form>
-  </main>
-
-  <footer>
-    <p>Autores: Alicia y Ivy</p>
-    <p>&copy; 2025 Mini Enciclopedia de Salud</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Mini Enciclopedia de Salud. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
