@@ -144,7 +144,7 @@ article {
   box-shadow: 0 1px 3px var(--sombra);
 }
 
-/* ---------- FORMULARIOS (versión más ligera y clásica) ---------- */
+/* ---------- FORMULARIOS (alineados y con estilo ligero) ---------- */
 form {
   background-color: var(--blanco);
   padding: 15px;
@@ -158,7 +158,7 @@ form {
 fieldset {
   border: 1px solid #ccc;
   border-radius: 6px;
-  padding: 10px;
+  padding: 10px 15px;
   margin-bottom: 15px;
 }
 
@@ -174,7 +174,13 @@ label {
   margin-top: 10px;
 }
 
-input, textarea, select {
+/* Campos normales */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
   width: 95%;
   padding: 8px;
   margin-top: 5px;
@@ -182,6 +188,7 @@ input, textarea, select {
   border-radius: 6px;
   font-family: var(--fuente);
   font-size: 1em;
+  box-sizing: border-box;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -190,8 +197,27 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 4px var(--rosa-suave);
 }
 
+/* Alineación correcta para radio y checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  margin-left: 5px;
+  transform: translateY(2px); /* los centra verticalmente con el texto */
+}
+
+label.inline {
+  display: inline-flex;
+  align-items: center;
+  font-weight: normal;
+  margin-right: 15px;
+  color: #004d61;
+}
+
 /* ---------- BOTONES ---------- */
-button, input[type="submit"], input[type="reset"] {
+button,
+input[type="submit"],
+input[type="reset"] {
   background-color: var(--rosa-suave);
   color: #333;
   font-weight: bold;
@@ -201,7 +227,7 @@ button, input[type="submit"], input[type="reset"] {
   cursor: pointer;
   transition: 0.3s;
   display: inline-block;
-  width: auto; /* no ocupa todo el ancho */
+  width: auto;
   margin-top: 10px;
 }
 
@@ -210,6 +236,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
   background-color: var(--azul-suave);
 }
+
 
 
 /* ---------- TABLAS ---------- */
