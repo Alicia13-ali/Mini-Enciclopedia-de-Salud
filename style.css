@@ -144,79 +144,75 @@ article {
   box-shadow: 0 1px 3px var(--sombra);
 }
 
-/* ---------- FORMULARIOS ---------- */
+/* ---------- FORMULARIOS (versión más ligera y clásica) ---------- */
 form {
   background-color: var(--blanco);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px var(--sombra);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px var(--sombra);
   max-width: 600px;
   margin: 20px auto;
 }
 
-label, legend {
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+legend {
   font-weight: bold;
   color: #004d61;
 }
 
-input, textarea, select, button {
-  width: 100%;
-  padding: 10px;
+label {
+  font-weight: bold;
+  color: #004d61;
+  display: block;
+  margin-top: 10px;
+}
+
+input, textarea, select {
+  width: 95%;
+  padding: 8px;
   margin-top: 5px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
   font-family: var(--fuente);
   font-size: 1em;
-  box-sizing: border-box;
 }
 
 input:focus, textarea:focus, select:focus {
   border-color: var(--rosa-suave);
   outline: none;
-  box-shadow: 0 0 5px var(--rosa-suave);
+  box-shadow: 0 0 4px var(--rosa-suave);
 }
 
 /* ---------- BOTONES ---------- */
-button {
+button, input[type="submit"], input[type="reset"] {
   background-color: var(--rosa-suave);
   color: #333;
   font-weight: bold;
   border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
+  display: inline-block;
+  width: auto; /* no ocupa todo el ancho */
+  margin-top: 10px;
 }
 
-button:hover {
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
   background-color: var(--azul-suave);
 }
 
-/* ---------- PIE DE PÁGINA ---------- */
-footer {
-  background: linear-gradient(90deg, var(--azul-suave), var(--rosa-suave));
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  color: #333;
-  font-weight: 500;
-  border-top: 3px solid var(--rosa-suave);
-}
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-  nav li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  main {
-    width: 90%;
-  }
-
-  form {
-    width: 90%;
-  }
-  /* ---------- TABLAS ---------- */
+/* ---------- TABLAS ---------- */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -275,6 +271,42 @@ section ul li a:hover {
   color: #fff;
 }
 
+/* ---------- PÁGINAS DE INFORMACIÓN SIMPLE (como Cabeza, Torso, Frutas, etc.) ---------- */
+main img {
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--sombra);
+}
+
+main a {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: var(--rosa-suave);
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px var(--sombra);
+  transition: 0.3s;
+}
+
+main a:hover {
+  background-color: var(--azul-suave);
+  color: #000;
+}
+
+/* ---------- RESULTADOS DE BÚSQUEDA ---------- */
+main h2 {
+  color: #0077b6;
+  border-bottom: 2px solid var(--azul-suave);
+  padding-bottom: 5px;
+}
+
+main p {
+  text-align: justify;
+}
+
 /* ---------- ERROR 404 ---------- */
 article h2 {
   color: #e91e63;
@@ -290,18 +322,6 @@ article section {
 
 article section h3 {
   color: #006994;
-}
-
-aside {
-  background-color: var(--azul-suave);
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 1px 3px var(--sombra);
-}
-
-aside h3 {
-  color: #0077b6;
 }
 
 aside ul li a {
@@ -320,4 +340,44 @@ aside ul li a:hover {
   color: #fff;
 }
 
+/* ---------- PIE DE PÁGINA ---------- */
+footer {
+  background: linear-gradient(90deg, var(--azul-suave), var(--rosa-suave));
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  color: #333;
+  font-weight: 500;
+  border-top: 3px solid var(--rosa-suave);
 }
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #006994;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
