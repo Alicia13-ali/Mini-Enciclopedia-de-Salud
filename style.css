@@ -1,9 +1,6 @@
-/* ------------------------------
-   🌸 MINI ENCICLOPEDIA DE SALUD
-   Estilo general - tonos claros, azul y rosa
-   ------------------------------ */
 
-/* ---------- VARIABLES DE COLOR ---------- */
+
+/* VARIABLES DE COLOR */
 :root {
   --azul-suave: #b3e5fc;
   --azul-claro: #e1f5fe;
@@ -14,8 +11,7 @@
   --sombra: rgba(0, 0, 0, 0.1);
   --fuente: 'Poppins', sans-serif;
 }
-
-/* ---------- RESETEO Y BASE ---------- */
+/* BODY */
 body {
   font-family: var(--fuente);
   background-color: var(--azul-claro);
@@ -38,7 +34,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------- CABECERA ---------- */
+/* CABECERA */
 header {
   background: linear-gradient(90deg, var(--azul-suave), var(--rosa-suave));
   padding: 20px;
@@ -56,7 +52,7 @@ header p {
   color: #444;
 }
 
-/* ---------- IMAGEN ---------- */
+/* IMAGEN */
 figure {
   margin: 15px auto;
 }
@@ -71,7 +67,7 @@ figcaption {
   color: #555;
 }
 
-/* ---------- NAVEGACIÓN ---------- */
+/* NAVEGACIÓN */
 nav {
   background-color: var(--rosa-claro);
   padding: 10px;
@@ -103,7 +99,7 @@ nav a:hover {
   background-color: var(--rosa-suave);
 }
 
-/* ---------- CONTENIDO PRINCIPAL ---------- */
+/* CONTENIDO PRINCIPAL */
 main {
   background-color: var(--blanco);
   margin: 20px auto;
@@ -123,7 +119,7 @@ section h3, section h4 {
   padding-bottom: 5px;
 }
 
-/* ---------- ASIDE ---------- */
+/* ASIDE */
 aside {
   background-color: var(--azul-claro);
   border-left: 5px solid var(--rosa-suave);
@@ -144,7 +140,8 @@ article {
   box-shadow: 0 1px 3px var(--sombra);
 }
 
-/* ---------- FORMULARIOS (alineados y con estilo ligero) ---------- */
+/* FORMULARIOS  */
+/* ---------- FORMULARIOS (limpios, alineados y unificados) ---------- */
 form {
   background-color: var(--blanco);
   padding: 15px;
@@ -155,6 +152,7 @@ form {
   margin: 20px auto;
 }
 
+/* Estructura general */
 fieldset {
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -162,19 +160,18 @@ fieldset {
   margin-bottom: 15px;
 }
 
-legend {
+legend,
+label {
   font-weight: bold;
   color: #004d61;
 }
 
 label {
-  font-weight: bold;
-  color: #004d61;
   display: block;
   margin-top: 10px;
 }
 
-/* Campos normales */
+/* Campos de texto y selectores */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -191,13 +188,15 @@ select {
   box-sizing: border-box;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   border-color: var(--rosa-suave);
   outline: none;
   box-shadow: 0 0 4px var(--rosa-suave);
 }
 
-/* ---------- RADIO BUTTONS: texto a la izquierda, botón a la derecha ---------- */
+/* BOTONES */
 .radio-opcion {
   display: flex;
   justify-content: space-between;
@@ -210,19 +209,15 @@ input:focus, textarea:focus, select:focus {
 }
 
 .radio-opcion label {
-  font-weight: bold;
-  color: #004d61;
   margin: 0;
 }
 
 .radio-opcion input[type="radio"] {
-  width: auto;
-  margin: 0;
   accent-color: var(--rosa-suave);
   transform: scale(1.1);
 }
 
-/* Checkboxes normales (sin cambiar su estructura) */
+
 input[type="checkbox"] {
   width: auto;
   margin-right: 8px;
@@ -238,7 +233,7 @@ label.inline {
   color: #004d61;
 }
 
-/* ---------- BOTONES ---------- */
+
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -261,10 +256,7 @@ input[type="reset"]:hover {
   background-color: var(--azul-suave);
 }
 
-
-
-
-/* ---------- TABLAS ---------- */
+/* TABLAS */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -296,7 +288,7 @@ table caption {
   color: #0077b6;
 }
 
-/* ---------- MAPAS INTERACTIVOS ---------- */
+/* MAPAS INTERACTIVOS */
 img[usemap] {
   max-width: 100%;
   border-radius: 12px;
@@ -323,7 +315,7 @@ section ul li a:hover {
   color: #fff;
 }
 
-/* ---------- PÁGINAS DE INFORMACIÓN SIMPLE (como Cabeza, Torso, Frutas, etc.) ---------- */
+/* PÁGINAS DE INFORMACIÓN */
 main img {
   display: block;
   margin: 15px auto;
@@ -348,7 +340,7 @@ main a:hover {
   color: #000;
 }
 
-/* ---------- RESULTADOS DE BÚSQUEDA ---------- */
+/*  RESULTADOS DE BÚSQUEDA  */
 main h2 {
   color: #0077b6;
   border-bottom: 2px solid var(--azul-suave);
@@ -359,7 +351,7 @@ main p {
   text-align: justify;
 }
 
-/* ---------- ERROR 404 ---------- */
+/* ERROR 404  */
 article h2 {
   color: #e91e63;
 }
@@ -392,7 +384,7 @@ aside ul li a:hover {
   color: #fff;
 }
 
-/* ---------- PIE DE PÁGINA ---------- */
+/* PIE DE PÁGINA */
 footer {
   background: linear-gradient(90deg, var(--azul-suave), var(--rosa-suave));
   text-align: center;
@@ -417,7 +409,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* RESPONSABLE */
 @media (max-width: 768px) {
   nav li {
     display: block;
