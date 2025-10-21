@@ -216,4 +216,108 @@ footer {
   form {
     width: 90%;
   }
+  /* ---------- TABLAS ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--sombra);
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  background-color: var(--rosa-suave);
+  color: var(--blanco);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--rosa-claro);
+}
+
+table caption {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+/* ---------- MAPAS INTERACTIVOS ---------- */
+img[usemap] {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--sombra);
+}
+
+map area {
+  cursor: pointer;
+}
+
+section ul li a {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  padding: 6px 12px;
+  background-color: var(--azul-claro);
+  color: #006994;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px var(--sombra);
+  transition: 0.3s;
+}
+
+section ul li a:hover {
+  background-color: var(--rosa-suave);
+  color: #fff;
+}
+
+/* ---------- ERROR 404 ---------- */
+article h2 {
+  color: #e91e63;
+}
+
+article section {
+  background-color: var(--rosa-claro);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px var(--sombra);
+}
+
+article section h3 {
+  color: #006994;
+}
+
+aside {
+  background-color: var(--azul-suave);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px var(--sombra);
+}
+
+aside h3 {
+  color: #0077b6;
+}
+
+aside ul li a {
+  background-color: var(--blanco);
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #006994;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+aside ul li a:hover {
+  background-color: var(--rosa-suave);
+  color: #fff;
+}
+
 }
