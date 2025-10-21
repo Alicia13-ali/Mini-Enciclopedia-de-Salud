@@ -197,13 +197,37 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 4px var(--rosa-suave);
 }
 
-/* Alineación correcta para radio y checkbox */
-input[type="radio"],
+/* ---------- RADIO BUTTONS: texto a la izquierda, botón a la derecha ---------- */
+.radio-opcion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: var(--blanco);
+  box-shadow: 0 1px 2px var(--sombra);
+}
+
+.radio-opcion label {
+  font-weight: bold;
+  color: #004d61;
+  margin: 0;
+}
+
+.radio-opcion input[type="radio"] {
+  width: auto;
+  margin: 0;
+  accent-color: var(--rosa-suave);
+  transform: scale(1.1);
+}
+
+/* Checkboxes normales (sin cambiar su estructura) */
 input[type="checkbox"] {
   width: auto;
   margin-right: 8px;
   margin-left: 5px;
-  transform: translateY(2px); /* los centra verticalmente con el texto */
+  transform: translateY(2px);
 }
 
 label.inline {
@@ -236,6 +260,7 @@ input[type="submit"]:hover,
 input[type="reset"]:hover {
   background-color: var(--azul-suave);
 }
+
 
 
 
