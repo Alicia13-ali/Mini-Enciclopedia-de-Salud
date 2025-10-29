@@ -97,26 +97,35 @@ nav a:hover {
   background-color: var(--rosa-suave);
 }
 
-/* SKIP LINK  */
+/*  SKIP LINK (enlace de salto accesible)  */
 .skip-link {
   position: absolute;
-  top: -40px; /* se oculta fuera de la pantalla */
-  left: 10px;
-  background-color: #004080; /* azul accesible */
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  z-index: 1000;
-  transition: top 0.3s ease;
+  left: -9999px; /* completamente fuera de pantalla */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-/* Se muestra cuando recibe foco (por tabulación) */
+/* Solo se muestra cuando recibe foco (al presionar TAB) */
 .skip-link:focus {
-  top: 10px; /* baja para hacerse visible */
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  background-color: #004080; /* azul accesible */
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
   outline: 3px solid yellow;
+  z-index: 1000;
+  transition: 0.3s;
 }
+
 
 /* CONTENIDO PRINCIPAL */
 main {
