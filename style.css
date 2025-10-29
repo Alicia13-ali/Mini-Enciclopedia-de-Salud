@@ -7,9 +7,7 @@
   --rosa-suave: #f8bbd0;
   --rosa-claro: #fce4ec;
   --gris-texto: #333;
-  --blanco: #fff;
-  --morado-pastel: #c5b3e6;  
-  --verde-pastel: #b3e6c5;   
+  --blanco: #fff;  
   --sombra: rgba(0, 0, 0, 0.1);
   --fuente: 'Poppins', sans-serif;
 }
@@ -186,120 +184,47 @@ article {
 }
 
 /* ==========================================================
-   FORMULARIOS
+   FORMULARIO PROFESIONAL REUTILIZABLE
    ========================================================== */
-form {
-  background-color: var(--blanco);
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  box-shadow: 0 1px 3px var(--sombra);
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-fieldset {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px 15px;
-  margin-bottom: 15px;
-}
-
-legend,
-label {
-  font-weight: bold;
-  color: #004d61;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
-}
-
-/* Inputs y selects */
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="date"],
-textarea,
-select {
-  width: 95%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: var(--fuente);
-  font-size: 1em;
-  box-sizing: border-box;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: var(--rosa-suave);
-  outline: none;
-  box-shadow: 0 0 4px var(--rosa-suave);
-}
-
-/* Botones */
-button,
-input[type="submit"],
-input[type="reset"] {
-  background-color: var(--rosa-suave);
-  color: #333;
-  font-weight: bold;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  background-color: var(--azul-suave);
-}
-
-/* FORMULARIO PROFESIONAL REUTILIZABLE */
 .form-profesional {
-  background: linear-gradient(135deg, var(--morado-pastel), var(--verde-pastel)); /* fondo degradado pastel */
-  padding: 25px 30px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 12px var(--sombra);
-  max-width: 700px;
-  margin: 20px auto;
+  background-color: var(--blanco);       /* fondo neutro */
+  padding: 25px 30px;                     /* espacio interior cómodo */
+  border-radius: 12px;                    /* bordes suaves */
+  border: 1px solid #ccc;                 /* borde sutil */
+  box-shadow: 0 4px 12px var(--sombra);  /* sombra profesional */
+  max-width: 700px;                       /* ancho máximo */
+  margin: 20px auto;                      /* centrado horizontal */
   font-family: var(--fuente);
   line-height: 1.6;
-  color: #333; /* texto oscuro para contraste */
+  color: #333;                            /* texto oscuro para buen contraste */
 }
 
-/* fieldset */
+/* Fieldset */
 .form-profesional fieldset {
-  border: 1px solid #b3e6c5; /* verde pastel borde */
+  border: 1px solid #ccc;                 /* borde neutro */
   border-radius: 10px;
   padding: 15px 20px;
   margin-bottom: 20px;
-  background-color: rgba(255,255,255,0.5); /* semi-transparente para destacar contenido */
+  background-color: #fdfdfd;              /* ligero contraste con el fondo principal */
 }
 
-/* legend */
+/* Legend */
 .form-profesional legend {
   font-weight: bold;
-  color: #6a1b9a; /* morado intenso para títulos */
+  color: #004d61;                         /* azul oscuro para buena lectura */
   padding: 0 5px;
+  font-size: 1.1em;
 }
 
-/* labels */
+/* Labels */
 .form-profesional label {
   display: block;
   margin-top: 12px;
   font-weight: bold;
-  color: #4a4a4a; /* gris oscuro legible */
+  color: #004d61;                         /* coherente con legend */
 }
 
-/* inputs, textarea, select */
+/* Inputs, textarea, select */
 .form-profesional input[type="text"],
 .form-profesional input[type="email"],
 .form-profesional input[type="number"],
@@ -309,27 +234,28 @@ input[type="reset"]:hover {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
-  border: 1px solid #b3e6c5; /* verde pastel borde */
+  border: 1px solid #ccc;
   border-radius: 8px;
   font-family: var(--fuente);
   font-size: 1em;
   box-sizing: border-box;
-  background-color: #fff; /* inputs blancos para mejor contraste */
+  background-color: #fff;                 /* inputs blancos para legibilidad */
 }
 
+/* Focus accesible */
 .form-profesional input:focus,
 .form-profesional textarea:focus,
 .form-profesional select:focus {
-  border-color: #6a1b9a; /* morado pastel oscuro al enfocar */
+  border-color: #e91e63;                  /* rosa intenso para enfoque */
   outline: none;
-  box-shadow: 0 0 5px #6a1b9a;
+  box-shadow: 0 0 4px #e91e63;
 }
 
-/* botones */
+/* Botones */
 .form-profesional button,
 .form-profesional input[type="submit"],
 .form-profesional input[type="reset"] {
-  background-color: #6a1b9a; /* morado */
+  background-color: #e91e63;              /* rosa principal */
   color: #fff;
   font-weight: bold;
   border: none;
@@ -340,12 +266,14 @@ input[type="reset"]:hover {
   margin-top: 15px;
 }
 
+/* Hover accesible y contrastado */
 .form-profesional button:hover,
 .form-profesional input[type="submit"]:hover,
 .form-profesional input[type="reset"]:hover {
-  background-color: #4caf50; /* verde pastel al pasar el cursor */
+  background-color: #006994;              /* azul fuerte al pasar el cursor */
   color: #fff;
 }
+
 
 
 /* ==========================================================
