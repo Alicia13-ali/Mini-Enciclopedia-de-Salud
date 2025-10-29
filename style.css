@@ -285,32 +285,7 @@ table caption {
   color: #0077b6;
 }
 
-/* MAPAS INTERACTIVOS */
-img[usemap] {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px var(--sombra);
-}
 
-map area {
-  cursor: pointer;
-}
-
-section ul li a {
-  display: inline-block;
-  margin: 5px 10px 5px 0;
-  padding: 6px 12px;
-  background-color: var(--azul-claro);
-  color: #006994;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px var(--sombra);
-  transition: 0.3s;
-}
-
-section ul li a:hover {
-  background-color: var(--rosa-suave);
-  color: #fff;
-}
 
 /* CONTENEDOR DE DOS COLUMNAS */
 .columns {
