@@ -1,18 +1,71 @@
+/* ==========================================================
+   MODO NOCHE
+   ========================================================== */
+/* Importar */
+@import url("style.css");
+
 body {
-  background-color: #121212;
-  color: #f1f1f1;
+  background-color: #0d0d0d;
+  color: #f5f5f5;
 }
 
 a {
-  color: #bb86fc;
+  color: #b8a3ff;
 }
 
-header, footer, nav {
-  background-color: #1e1e1e;
+a:hover,
+a:focus {
+  color: #ff8ad1;
 }
 
-button, input {
+header,
+footer,
+nav {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border-bottom: 2px solid #b8a3ff;
+}
+
+form,
+section,
+article {
+  background-color: #181818;
+  border: 1px solid #333;
+}
+
+input,
+textarea,
+select {
   background-color: #2a2a2a;
-  color: #f1f1f1;
-  border: 1px solid #444;
+  color: #fff;
+  border-color: #555;
 }
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ff6ad5;
+  box-shadow: 0 0 6px #ff6ad5;
+  outline: none;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: linear-gradient(135deg, #ff6ad5, #3a9eff);
+  color: #fff;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff8ad1;
+}
+
+:focus {
+  outline: 3px solid #b8a3ff;
+  outline-offset: 2px;
+}
+
+
