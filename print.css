@@ -1,16 +1,13 @@
 /* =====================
-   ESTILO DE IMPRESIÓN 
+   ESTILO DE IMPRESIÓN
    ===================== */
 
 @charset "UTF-8";
-@import url("style.css");
 
 /* Configuración de página */
 @page {
   size: A4;
   margin: 2cm;
-  widows: 2;
-  orphans: 2;
 }
 
 /* Estilo general */
@@ -20,12 +17,14 @@ body {
   background: #fff;
   font-size: 12pt;
   line-height: 1.6;
+  -webkit-print-color-adjust: exact; /* Firefox y Chrome para colores exactos */
+  print-color-adjust: exact;
 }
 
 /* Ocultar elementos no esenciales */
 header, nav, footer, .menu, .botones, .formulario, .banner, .dynamic-content,
 script, iframe, object, embed {
-  display: none;
+  display: none !important;
 }
 
 /* Encabezados */
@@ -67,7 +66,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1em;
-  page-break-inside: auto;
+  page-break-inside: auto; /* permite continuar en la misma página si cabe */
+  color: #000;
 }
 
 table th, table td {
@@ -77,12 +77,12 @@ table th, table td {
 }
 
 table th {
-  background-color: #e0e0e0; /* gris claro */
+  background-color: #e0e0e0;
   color: #000;
 }
 
 table tr:nth-child(even) {
-  background-color: #f9f9f9; /* alternancia suave */
+  background-color: #f9f9f9;
 }
 
 /* Párrafos y listas */
@@ -96,7 +96,7 @@ ul, ol {
 }
 
 /* Evitar cortes de página dentro de bloques importantes */
-section, article, aside, figure {
+section, article, aside, figure, table, pre {
   page-break-inside: avoid;
 }
 
@@ -116,6 +116,7 @@ footer.print-info::before {
   font-size: 10pt;
   margin-bottom: 5px;
 }
+
 
 
 
