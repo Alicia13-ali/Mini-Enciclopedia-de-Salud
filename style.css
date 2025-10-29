@@ -20,7 +20,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #006994; 
+  color: #006994;
 }
 
 a {
@@ -139,6 +139,7 @@ article {
 }
 
 /* FORMULARIOS  */
+/* ---------- FORMULARIOS (limpios, alineados y unificados) ---------- */
 form {
   background-color: var(--blanco);
   padding: 15px;
@@ -285,28 +286,31 @@ table caption {
   color: #0077b6;
 }
 
-
-
-/* CONTENEDOR DE DOS COLUMNAS */
-.columns {
-  display: flex;
-  gap: 20px; /* Espacio entre columnas */
-  flex-wrap: wrap; /* Para que se acomode en pantallas pequeñas */
+/* MAPAS INTERACTIVOS */
+img[usemap] {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--sombra);
 }
 
-/* CADA COLUMNA */
-.columns figure,
-.columns section {
-  flex: 1; /* Ocupa la misma proporción */
-  min-width: 300px; /* Evita que se haga demasiado pequeño en pantallas chicas */
+map area {
+  cursor: pointer;
 }
 
-/* AJUSTES RESPONSIVE */
-@media (max-width: 768px) {
-  .columns {
-    flex-direction: column;
-    gap: 15px;
-  }
+section ul li a {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  padding: 6px 12px;
+  background-color: var(--azul-claro);
+  color: #006994;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px var(--sombra);
+  transition: 0.3s;
+}
+
+section ul li a:hover {
+  background-color: var(--rosa-suave);
+  color: #fff;
 }
 
 /* PÁGINAS DE INFORMACIÓN */
@@ -418,4 +422,3 @@ footer a:hover {
     width: 90%;
   }
 }
-
