@@ -313,6 +313,50 @@ section ul li a:hover {
   color: #fff;
 }
 
+/* ======= DISEÑO EN DOS COLUMNAS FIJAS ======= */
+main.declaracion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales siempre */
+  gap: 30px;
+  max-width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* estilo visual de cada bloque */
+main.declaracion section {
+  background-color: var(--blanco);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px var(--sombra);
+}
+
+/* encabezados */
+main.declaracion h2 {
+  color: #0077b6;
+  border-bottom: 2px solid var(--azul-suave);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+/* texto */
+main.declaracion p, 
+main.declaracion li {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* 🔒 mantener dos columnas SIEMPRE, incluso en móviles */
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: auto; /* permite desplazarse horizontalmente si es necesario */
+  }
+  main.declaracion {
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* mantiene 2 columnas aunque se haga scroll horizontal */
+  }
+}
+
+
 /* PÁGINAS DE INFORMACIÓN */
 main img {
   display: block;
