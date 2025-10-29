@@ -1,4 +1,6 @@
-/* VARIABLES DE COLOR */
+/* ==========================================================
+   VARIABLES DE COLOR Y FUENTE
+   ========================================================== */
 :root {
   --azul-suave: #b3e5fc;
   --azul-claro: #e1f5fe;
@@ -9,7 +11,10 @@
   --sombra: rgba(0, 0, 0, 0.1);
   --fuente: 'Poppins', sans-serif;
 }
-/* BODY */
+
+/* ==========================================================
+   ESTILO GENERAL
+   ========================================================== */
 body {
   font-family: var(--fuente);
   background-color: var(--azul-claro);
@@ -32,7 +37,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* CABECERA */
+/* ==========================================================
+   CABECERA
+   ========================================================== */
 header {
   background: linear-gradient(90deg, var(--azul-suave), var(--rosa-suave));
   padding: 20px;
@@ -50,7 +57,9 @@ header p {
   color: #444;
 }
 
-/* IMAGEN */
+/* ==========================================================
+   IMÁGENES Y FIGURAS
+   ========================================================== */
 figure {
   margin: 15px auto;
 }
@@ -65,7 +74,9 @@ figcaption {
   color: #555;
 }
 
-/* NAVEGACIÓN */
+/* ==========================================================
+   NAVEGACIÓN
+   ========================================================== */
 nav {
   background-color: var(--rosa-claro);
   padding: 10px;
@@ -97,17 +108,18 @@ nav a:hover {
   background-color: var(--rosa-suave);
 }
 
-/*  SKIP LINK (enlace de salto accesible)  */
+/* ==========================================================
+   SKIP LINK (ENLACE ACCESIBLE)
+   ========================================================== */
 .skip-link {
   position: absolute;
-  left: -9999px; /* completamente fuera de pantalla */
+  left: -9999px;
   top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;
 }
 
-/* Solo se muestra cuando recibe foco (al presionar TAB) */
 .skip-link:focus {
   position: absolute;
   left: 10px;
@@ -115,7 +127,7 @@ nav a:hover {
   width: auto;
   height: auto;
   overflow: visible;
-  background-color: #004080; /* azul accesible */
+  background-color: #004080;
   color: #fff;
   padding: 10px 15px;
   border-radius: 6px;
@@ -126,8 +138,9 @@ nav a:hover {
   transition: 0.3s;
 }
 
-
-/* CONTENIDO PRINCIPAL */
+/* ==========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================== */
 main {
   background-color: var(--blanco);
   margin: 20px auto;
@@ -147,7 +160,9 @@ section h3, section h4 {
   padding-bottom: 5px;
 }
 
-/* ASIDE */
+/* ==========================================================
+   ASIDE Y ARTÍCULOS DESTACADOS
+   ========================================================== */
 aside {
   background-color: var(--azul-claro);
   border-left: 5px solid var(--rosa-suave);
@@ -168,8 +183,9 @@ article {
   box-shadow: 0 1px 3px var(--sombra);
 }
 
-/* FORMULARIOS  */
-/* ---------- FORMULARIOS (limpios, alineados y unificados) ---------- */
+/* ==========================================================
+   FORMULARIOS
+   ========================================================== */
 form {
   background-color: var(--blanco);
   padding: 15px;
@@ -180,7 +196,6 @@ form {
   margin: 20px auto;
 }
 
-/* Estructura general */
 fieldset {
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -199,7 +214,7 @@ label {
   margin-top: 10px;
 }
 
-/* Campos de texto y selectores */
+/* Inputs y selects */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -224,44 +239,7 @@ select:focus {
   box-shadow: 0 0 4px var(--rosa-suave);
 }
 
-/* BOTONES */
-.radio-opcion {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 6px 0;
-  padding: 6px 10px;
-  border-radius: 6px;
-  background-color: var(--blanco);
-  box-shadow: 0 1px 2px var(--sombra);
-}
-
-.radio-opcion label {
-  margin: 0;
-}
-
-.radio-opcion input[type="radio"] {
-  accent-color: var(--rosa-suave);
-  transform: scale(1.1);
-}
-
-
-input[type="checkbox"] {
-  width: auto;
-  margin-right: 8px;
-  margin-left: 5px;
-  transform: translateY(2px);
-}
-
-label.inline {
-  display: inline-flex;
-  align-items: center;
-  font-weight: normal;
-  margin-right: 15px;
-  color: #004d61;
-}
-
-
+/* Botones */
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -273,9 +251,6 @@ input[type="reset"] {
   border-radius: 20px;
   cursor: pointer;
   transition: 0.3s;
-  display: inline-block;
-  width: auto;
-  margin-top: 10px;
 }
 
 button:hover,
@@ -284,7 +259,88 @@ input[type="reset"]:hover {
   background-color: var(--azul-suave);
 }
 
-/* TABLAS */
+/* FORMULARIO PROFESIONAL REUTILIZABLE */
+.form-profesional {
+  background-color: var(--blanco);
+  padding: 25px 30px;           /* un poco más de espacio interior */
+  border-radius: 12px;          /* bordes más suaves */
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px var(--sombra); /* sombra más elegante */
+  max-width: 700px;             /* ancho máximo */
+  margin: 20px auto;            /* centrado horizontal */
+  font-family: var(--fuente);
+  line-height: 1.6;
+}
+
+.form-profesional fieldset {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.form-profesional legend {
+  font-weight: bold;
+  color: #0077b6;
+  padding: 0 5px;
+}
+
+.form-profesional label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #004d61;
+}
+
+.form-profesional input[type="text"],
+.form-profesional input[type="email"],
+.form-profesional input[type="number"],
+.form-profesional input[type="date"],
+.form-profesional textarea,
+.form-profesional select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: var(--fuente);
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.form-profesional input:focus,
+.form-profesional textarea:focus,
+.form-profesional select:focus {
+  border-color: var(--rosa-suave);
+  outline: none;
+  box-shadow: 0 0 5px var(--rosa-suave);
+}
+
+.form-profesional button,
+.form-profesional input[type="submit"],
+.form-profesional input[type="reset"] {
+  background-color: var(--rosa-suave);
+  color: #333;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.form-profesional button:hover,
+.form-profesional input[type="submit"]:hover,
+.form-profesional input[type="reset"]:hover {
+  background-color: var(--azul-suave);
+  color: #000;
+}
+
+
+/* ==========================================================
+   TABLAS
+   ========================================================== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -316,7 +372,9 @@ table caption {
   color: #0077b6;
 }
 
-/* MAPAS INTERACTIVOS */
+/* ==========================================================
+   MAPAS INTERACTIVOS
+   ========================================================== */
 img[usemap] {
   max-width: 100%;
   border-radius: 12px;
@@ -327,33 +385,18 @@ map area {
   cursor: pointer;
 }
 
-section ul li a {
-  display: inline-block;
-  margin: 5px 10px 5px 0;
-  padding: 6px 12px;
-  background-color: var(--azul-claro);
-  color: #006994;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px var(--sombra);
-  transition: 0.3s;
-}
-
-section ul li a:hover {
-  background-color: var(--rosa-suave);
-  color: #fff;
-}
-
-/* ======= DISEÑO EN DOS COLUMNAS FIJAS ======= */
+/* ==========================================================
+   PÁGINA DECLARACIÓN ACCESIBILIDAD (2 COLUMNAS)
+   ========================================================== */
 main.declaracion {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales siempre */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 100%;
   padding: 40px;
   box-sizing: border-box;
 }
 
-/* estilo visual de cada bloque */
 main.declaracion section {
   background-color: var(--blanco);
   padding: 20px;
@@ -361,7 +404,6 @@ main.declaracion section {
   box-shadow: 0 2px 6px var(--sombra);
 }
 
-/* encabezados */
 main.declaracion h2 {
   color: #0077b6;
   border-bottom: 2px solid var(--azul-suave);
@@ -369,94 +411,19 @@ main.declaracion h2 {
   margin-bottom: 10px;
 }
 
-/* texto */
-main.declaracion p, 
-main.declaracion li {
-  font-size: 1em;
-  line-height: 1.6;
-}
-
-/* 🔒 mantener dos columnas SIEMPRE, incluso en móviles */
+/* Mantener dos columnas siempre */
 @media (max-width: 600px) {
   html, body {
-    overflow-x: auto; /* permite desplazarse horizontalmente si es necesario */
+    overflow-x: auto;
   }
   main.declaracion {
-    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* mantiene 2 columnas aunque se haga scroll horizontal */
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
   }
 }
 
-
-/* PÁGINAS DE INFORMACIÓN */
-main img {
-  display: block;
-  margin: 15px auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px var(--sombra);
-}
-
-main a {
-  display: inline-block;
-  margin-top: 15px;
-  background-color: var(--rosa-suave);
-  color: #333;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  box-shadow: 0 1px 3px var(--sombra);
-  transition: 0.3s;
-}
-
-main a:hover {
-  background-color: var(--azul-suave);
-  color: #000;
-}
-
-/*  RESULTADOS DE BÚSQUEDA  */
-main h2 {
-  color: #0077b6;
-  border-bottom: 2px solid var(--azul-suave);
-  padding-bottom: 5px;
-}
-
-main p {
-  text-align: justify;
-}
-
-/* ERROR 404  */
-article h2 {
-  color: #e91e63;
-}
-
-article section {
-  background-color: var(--rosa-claro);
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px var(--sombra);
-}
-
-article section h3 {
-  color: #006994;
-}
-
-aside ul li a {
-  background-color: var(--blanco);
-  padding: 5px 10px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-bottom: 5px;
-  color: #006994;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-aside ul li a:hover {
-  background-color: var(--rosa-suave);
-  color: #fff;
-}
-
-/* PIE DE PÁGINA */
+/* ==========================================================
+   PIE DE PÁGINA
+   ========================================================== */
 footer {
   background: linear-gradient(90deg, var(--azul-suave), var(--rosa-suave));
   text-align: center;
@@ -481,18 +448,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* RESPONSABLE */
+/* ==========================================================
+   DISEÑO RESPONSIVE GENERAL
+   ========================================================== */
 @media (max-width: 768px) {
   nav li {
     display: block;
     margin: 10px 0;
   }
 
-  main {
-    width: 90%;
-  }
-
-  form {
+  main, form {
     width: 90%;
   }
 }
+
