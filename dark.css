@@ -140,3 +140,53 @@ img, figure img {
   border: 1px solid #555;
 }
 
+/* ==========================================================
+   FORMULARIOS Y CAMPOS INPUT
+   ========================================================== */
+input,
+textarea,
+select,
+option {
+  background-color: #111111 !important; /* fondo negro */
+  color: #ffffff !important;           /* texto blanco */
+  border: 1px solid #555 !important;   /* borde fino */
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 1em;
+}
+
+/* Placeholder en inputs */
+::placeholder {
+  color: #bbbbbb;  /* texto gris claro para placeholders */
+  opacity: 1;
+}
+
+/* Focus de campos */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #66ccff !important;
+  box-shadow: 0 0 4px #66ccff !important;
+  outline: none !important;
+}
+
+/* Botones */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #555 !important;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+  border-color: #66ccff !important;
+  box-shadow: 0 0 6px #66ccff !important;
+}
