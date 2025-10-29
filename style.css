@@ -312,6 +312,28 @@ section ul li a:hover {
   color: #fff;
 }
 
+/* CONTENEDOR DE DOS COLUMNAS */
+.columns {
+  display: flex;
+  gap: 20px; /* Espacio entre columnas */
+  flex-wrap: wrap; /* Para que se acomode en pantallas pequeñas */
+}
+
+/* CADA COLUMNA */
+.columns figure,
+.columns section {
+  flex: 1; /* Ocupa la misma proporción */
+  min-width: 300px; /* Evita que se haga demasiado pequeño en pantallas chicas */
+}
+
+/* AJUSTES RESPONSIVE */
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 /* PÁGINAS DE INFORMACIÓN */
 main img {
   display: block;

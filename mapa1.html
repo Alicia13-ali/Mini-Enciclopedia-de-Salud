@@ -26,10 +26,27 @@
     </header>
 
     <main>
-        <figure>
-            <img src="cuerpo_humano.jpg" usemap="#cuerpo" alt="Mapa del cuerpo humano con partes activas" width="500">
-            <figcaption>Mapa interactivo del cuerpo humano</figcaption>
-        </figure>
+		<div class="columns">
+            <!-- COLUMNA IZQUIERDA: IMAGEN -->
+            <figure>
+                <img src="cuerpo_humano.jpg" usemap="#cuerpo" alt="Mapa del cuerpo humano con partes activas" width="500">
+                <figcaption>Mapa interactivo del cuerpo humano</figcaption>
+            </figure>
+
+            <!-- COLUMNA DERECHA: LISTA DE PARTES -->
+            <section>
+                <h2>Lista de partes del cuerpo y enlaces</h2>
+                <ul>
+                    <li><a href="cabeza.html">Cabeza: información sobre salud cerebral</a></li>
+                    <li><a href="torso.html">Torso: información sobre el pecho y abdomen</a></li>
+                    <li><a href="brazo_izquierdo.html">Brazo izquierdo</a></li>
+                    <li><a href="brazo_derecho.html">Brazo derecho</a></li>
+                    <li><a href="piernas.html">Piernas: información sobre las extremidades inferiores</a></li>
+                    <li><a href="pies.html">Pies: cuidado y salud de los pies</a></li>
+                    <li><a href="informacion_general_cuerpo.html">Información general sobre el cuerpo humano</a></li>
+                </ul>
+            </section>
+        </div>
 
         <map name="cuerpo">
 			<area shape="rect" coords="200,20,300,120" href="cabeza.html" alt="Cabeza: información sobre salud cerebral">
