@@ -97,6 +97,27 @@ nav a:hover {
   background-color: var(--rosa-suave);
 }
 
+/* SKIP LINK  */
+.skip-link {
+  position: absolute;
+  top: -40px; /* se oculta fuera de la pantalla */
+  left: 10px;
+  background-color: #004080; /* azul accesible */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+/* Se muestra cuando recibe foco (por tabulación) */
+.skip-link:focus {
+  top: 10px; /* baja para hacerse visible */
+  outline: 3px solid yellow;
+}
+
 /* CONTENIDO PRINCIPAL */
 main {
   background-color: var(--blanco);
