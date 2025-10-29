@@ -1,0 +1,27 @@
+@page {
+  margin: 2cm;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  color: #000;
+  background: #fff;
+}
+
+header, nav, footer, .menu, .botones, .formulario, .banner {
+  display: none;
+}
+
+a::after {
+  content: " (" attr(href) ")";
+  font-size: 10pt;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  page-break-after: avoid;
+}

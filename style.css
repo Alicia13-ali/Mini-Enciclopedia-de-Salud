@@ -1,5 +1,3 @@
-
-
 /* VARIABLES DE COLOR */
 :root {
   --azul-suave: #b3e5fc;
@@ -22,7 +20,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #006994;
+  color: #006994; 
 }
 
 a {
@@ -141,7 +139,6 @@ article {
 }
 
 /* FORMULARIOS  */
-/* ---------- FORMULARIOS (limpios, alineados y unificados) ---------- */
 form {
   background-color: var(--blanco);
   padding: 15px;
