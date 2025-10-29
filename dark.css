@@ -1,71 +1,128 @@
-/* ==========================================================
+/* ============
    MODO NOCHE
-   ========================================================== */
+   ============ */
 /* Importar */
 @import url("style.css");
 
+/* Fondo general y texto */
 body {
-  background-color: #0d0d0d;
-  color: #f5f5f5;
+  background-color: #0d0d0d;  /* negro suave */
+  color: #f5f5f5;             /* texto claro */
+  line-height: 1.6;
 }
 
+/* Enlaces */
 a {
-  color: #b8a3ff;
+  color: #b8a3ff;             /* azul claro para contraste */
+  text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  color: #ff8ad1;
+  color: #ff8ad1;             /* rosa pastel para resaltar */
 }
 
+/* Cabecera, navegación y pie */
 header,
 footer,
 nav {
-  background-color: #1a1a1a;
+  background-color: #1a1a1a;  /* negro menos intenso */
   color: #f5f5f5;
-  border-bottom: 2px solid #b8a3ff;
+  border-bottom: 1px solid #555; /* borde fino */
 }
 
-form,
+/* Secciones y contenedores */
 section,
-article {
-  background-color: #181818;
-  border: 1px solid #333;
+article,
+main,
+aside,
+form {
+  background-color: #121212;  /* negro oscuro uniforme */
+  border: 1px solid #333;     /* borde fino */
+  border-radius: 6px;         /* bordes suaves */
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
+/* Inputs, selects y textarea */
 input,
 textarea,
 select {
-  background-color: #2a2a2a;
-  color: #fff;
-  border-color: #555;
+  background-color: #1a1a1a;  /* fondo oscuro */
+  color: #f5f5f5;             /* texto claro */
+  border: 1px solid #555;     /* borde fino */
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: #ff6ad5;
-  box-shadow: 0 0 6px #ff6ad5;
+  border-color: #ff8ad1;      /* foco destacado */
+  box-shadow: 0 0 5px #ff8ad1;
   outline: none;
 }
 
+/* Botones */
 button,
 input[type="submit"],
 input[type="reset"] {
-  background: linear-gradient(135deg, #ff6ad5, #3a9eff);
-  color: #fff;
+  background-color: #3a3a3a;  /* gris oscuro */
+  color: #f5f5f5;
+  border: 1px solid #555;     /* borde fino */
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #ff8ad1;
+  background-color: #5050ff;  /* azul más brillante */
+  color: #fff;
+  box-shadow: 0 0 8px #5050ff;
 }
 
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+}
+
+table th,
+table td {
+  border: 1px solid #555;     /* borde fino */
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #1a1a1a;  /* negro oscuro */
+  color: #b8a3ff;             /* azul claro */
+}
+
+table tr:nth-child(even) {
+  background-color: #121212;  /* fila alterna ligeramente diferente */
+}
+
+/* Enfoque accesible */
 :focus {
-  outline: 3px solid #b8a3ff;
+  outline: 3px solid #ff8ad1;
   outline-offset: 2px;
+}
+
+/* Imágenes */
+img,
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #333;      /* borde discreto */
 }
 
 
