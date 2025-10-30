@@ -1,89 +1,127 @@
-/* ===============================================
-   MODO NOCHE ACCESIBLE Y AGRADABLE A LA VISTA
-   =============================================== */
+/* =======================================================
+   MODO NOCHE ACCESIBLE (DARK.CSS)
+   Mini Enciclopedia de Salud
+   ======================================================= */
 
-/* Importar CSS base */
+/* Importar el estilo base para mantener coherencia */
 @import url("style.css");
 
-/* ---------------------------
-   COLORES BASE
-   --------------------------- */
-/*
-#0d0d0d → negro profundo (fondo principal)
-#1a1a1a → gris oscuro
-#2b2b2b → gris medio oscuro
-#444444 → gris medio claro
-#dddddd → blanco suave (texto legible)
-#66ccff → azul brillante (resalte accesible)
-*/
+/* =======================================================
+   PALETA DE COLORES ELEGIDA (contraste AA+)
+   -------------------------------------------------------
+   #0d0d0d  → Fondo principal (negro profundo)
+   #1a1a1a  → Fondo de contenedores
+   #2e2e2e  → Fondo de elementos interactivos
+   #444444  → Bordes suaves
+   #dddddd  → Texto principal (blanco cálido)
+   #99e6ff  → Azul resalte (hover/acento)
+   #66ccff  → Azul accesible (foco/acciones)
+   ======================================================= */
 
+/* =======================================================
+   CONFIGURACIÓN GLOBAL
+   ======================================================= */
 body {
-  background-color: #0d0d0d;  /* negro base */
-  color: #dddddd;             /* texto blanco suave */
+  background-color: #0d0d0d;
+  color: #dddddd;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* ---------------------------
+/* Texto accesible en encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* =======================================================
    ENLACES
-   --------------------------- */
+   ======================================================= */
 a {
   color: #66ccff;
   text-decoration: underline;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #99e6ff;  /* tono más claro */
+  color: #99e6ff;
+  background-color: #1a1a1a;
   outline: none;
 }
 
-/* ---------------------------
-   CABECERA, NAVEGACIÓN Y PIE
-   --------------------------- */
+/* =======================================================
+   CABECERA, NAVEGACIÓN Y PIE DE PÁGINA
+   ======================================================= */
 header,
 nav,
 footer {
   background-color: #1a1a1a;
   color: #dddddd;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #444444;
+  padding: 1em;
 }
 
-/* ---------------------------
-   SECCIONES, ARTÍCULOS, FORMULARIOS
-   --------------------------- */
-section,
-article,
-form,
-aside,
-main {
+header h1, footer p {
+  text-align: center;
+}
+
+/* Menús y listas de navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0.4em 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+}
+
+nav a:hover, nav a:focus {
+  background-color: #2e2e2e;
+  color: #99e6ff;
+}
+
+/* =======================================================
+   CONTENEDORES PRINCIPALES
+   ======================================================= */
+main, section, article, aside, form {
   background-color: #1a1a1a;
   color: #dddddd;
-  border: 1px solid #2b2b2b;
-  border-radius: 8px;
-  padding: 16px;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin: 1em;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
 }
 
-/* ---------------------------
-   CAMPOS DE FORMULARIO
-   --------------------------- */
+/* =======================================================
+   FORMULARIOS Y CAMPOS DE ENTRADA
+   ======================================================= */
 input,
 textarea,
 select {
-  background-color: #2b2b2b;
+  background-color: #2e2e2e;
   color: #ffffff;
-  border: 1px solid #444;
+  border: 1px solid #444444;
   border-radius: 6px;
   padding: 10px;
   font-size: 1em;
   width: 100%;
-  transition: 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 ::placeholder {
   color: #aaaaaa;
-  opacity: 1;
 }
 
 input:focus,
@@ -94,15 +132,21 @@ select:focus {
   outline: none;
 }
 
-/* ---------------------------
+/* Campos de selección y opción */
+option {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
+/* =======================================================
    BOTONES
-   --------------------------- */
+   ======================================================= */
 button,
 input[type="submit"],
 input[type="reset"] {
-  background-color: #2b2b2b;
+  background-color: #2e2e2e;
   color: #ffffff;
-  border: 1px solid #444;
+  border: 1px solid #444444;
   border-radius: 8px;
   padding: 10px 20px;
   cursor: pointer;
@@ -112,16 +156,17 @@ input[type="reset"] {
 
 button:hover,
 input[type="submit"]:hover,
-input[type="reset"]:hover {
+input[type="reset"]:hover,
+button:focus {
   background-color: #66ccff;
   color: #0d0d0d;
   border-color: #66ccff;
   box-shadow: 0 0 8px #66ccff;
 }
 
-/* ---------------------------
+/* =======================================================
    TABLAS
-   --------------------------- */
+   ======================================================= */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -129,45 +174,75 @@ table {
   color: #dddddd;
 }
 
-table th,
-table td {
-  border: 1px solid #444;
-  padding: 10px;
+caption {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
-table th {
-  background-color: #2b2b2b;
+th, td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #2e2e2e;
   color: #ffffff;
 }
 
-table tr:nth-child(even) {
-  background-color: #111111;
+tr:nth-child(even) {
+  background-color: #121212;
 }
 
-/* ---------------------------
-   ENFOQUE ACCESIBLE
-   --------------------------- */
-:focus {
-  outline: 2px solid #66ccff;
-  outline-offset: 2px;
-}
-
-/* ---------------------------
-   IMÁGENES
-   --------------------------- */
-img,
-figure img {
+/* =======================================================
+   IMÁGENES Y FIGURAS
+   ======================================================= */
+img, figure img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
   border: 1px solid #444;
 }
 
-/* ---------------------------
-   FORMULARIOS EXTRA
-   --------------------------- */
-option {
-  background-color: #2b2b2b;
-  color: #ffffff;
+/* Figcaption accesible */
+figcaption {
+  color: #cccccc;
+  font-size: 0.9em;
+  text-align: center;
 }
 
+/* =======================================================
+   ENFOQUE Y ACCESIBILIDAD VISUAL
+   ======================================================= */
+:focus {
+  outline: 2px solid #66ccff;
+  outline-offset: 3px;
+}
+
+/* Enlace para saltar contenido principal */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #66ccff;
+  color: #000;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* =======================================================
+   PIE DE PÁGINA
+   ======================================================= */
+footer {
+  border-top: 1px solid #444;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #bbbbbb;
+}
