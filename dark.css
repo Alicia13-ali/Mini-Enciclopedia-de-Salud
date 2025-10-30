@@ -1,13 +1,13 @@
-/* ==========================================================
-   MODO NOCHE PROFESIONAL - Mini Enciclopedia de Salud
-   ========================================================== */
+/* =========================
+   MODO NOCHE PROFESIONAL 
+   ========================= */
 
 /* Importar tipografía accesible */
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Poppins:wght@400;600&display=swap');
 
 /* ==========================================================
    PALETA PRINCIPAL
-   ----------------------------------------------------------
+   
    Fondo principal: #0d0d0d   → negro profundo
    Fondo contenedores: #151515
    Campos formulario: #1f1f1f
@@ -228,21 +228,23 @@ input[type="reset"]:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #0d0d0d;
-  color: #dddddd;
-  border: 1px solid #333;
-}
-th, td {
-  border: 1px solid #333;
-  padding: 10px;
-  text-align: left;
-}
-th {
-  background-color: #1a1a1a;
+  background-color: #111111;
   color: #ffffff;
 }
-tr:nth-child(even) {
-  background-color: #141414;
+
+table th,
+table td {
+  border: 1px solid #555;
+  padding: 10px;
+}
+
+table th {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+table tr:nth-child(even) {
+  background-color: #1a1a1a;
 }
 
 /* ==========================================================
