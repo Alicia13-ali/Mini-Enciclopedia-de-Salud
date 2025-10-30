@@ -1,192 +1,173 @@
-/* ============
-   MODO NOCHE 
-   ============ */
+/* ===============================================
+   MODO NOCHE ACCESIBLE Y AGRADABLE A LA VISTA
+   =============================================== */
+
 /* Importar CSS base */
 @import url("style.css");
 
+/* ---------------------------
+   COLORES BASE
+   --------------------------- */
+/*
+#0d0d0d → negro profundo (fondo principal)
+#1a1a1a → gris oscuro
+#2b2b2b → gris medio oscuro
+#444444 → gris medio claro
+#dddddd → blanco suave (texto legible)
+#66ccff → azul brillante (resalte accesible)
+*/
 
 body {
-  background-color: #000000;  /* fondo negro */
-  color: #ffffff;             /* texto blanco */
+  background-color: #0d0d0d;  /* negro base */
+  color: #dddddd;             /* texto blanco suave */
   font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
 }
 
-/* Enlaces */
+/* ---------------------------
+   ENLACES
+   --------------------------- */
 a {
-  color: #66ccff;            /* azul claro para destacar */
+  color: #66ccff;
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #ff99ff;            /* rosa brillante al pasar cursor */
+  color: #99e6ff;  /* tono más claro */
   outline: none;
 }
 
-/* ==========================================================
-   CABECERA, NAV, FOOTER
-   ========================================================== */
+/* ---------------------------
+   CABECERA, NAVEGACIÓN Y PIE
+   --------------------------- */
 header,
 nav,
 footer {
-  background-color: #111111;  /* negro muy oscuro */
-  color: #ffffff;
-  border-bottom: 1px solid #555; /* borde fino */
+  background-color: #1a1a1a;
+  color: #dddddd;
+  border-bottom: 1px solid #444;
 }
 
-/* ==========================================================
-   SECCIONES, ARTÍCULOS Y FORMULARIOS
-   ========================================================== */
+/* ---------------------------
+   SECCIONES, ARTÍCULOS, FORMULARIOS
+   --------------------------- */
 section,
 article,
 form,
 aside,
 main {
-  background-color: #111111;
-  color: #ffffff;
-  border: 1px solid #333;  /* borde fino */
-  border-radius: 6px;
-  padding: 15px;
-  box-shadow: none;
+  background-color: #1a1a1a;
+  color: #dddddd;
+  border: 1px solid #2b2b2b;
+  border-radius: 8px;
+  padding: 16px;
 }
 
-/* ==========================================================
-   INPUT, TEXTAREA, SELECT
-   ========================================================== */
+/* ---------------------------
+   CAMPOS DE FORMULARIO
+   --------------------------- */
 input,
 textarea,
 select {
-  background-color: #222222;
+  background-color: #2b2b2b;
   color: #ffffff;
-  border: 1px solid #555;
-  border-radius: 4px;
-  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
   font-size: 1em;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+::placeholder {
+  color: #aaaaaa;
+  opacity: 1;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   border-color: #66ccff;
-  box-shadow: 0 0 4px #66ccff;
+  box-shadow: 0 0 6px #66ccff;
   outline: none;
 }
 
-/* ==========================================================
+/* ---------------------------
    BOTONES
-   ========================================================== */
+   --------------------------- */
 button,
 input[type="submit"],
 input[type="reset"] {
-  background-color: #333333;
+  background-color: #2b2b2b;
   color: #ffffff;
-  border: 1px solid #555;
-  border-radius: 6px;
+  border: 1px solid #444;
+  border-radius: 8px;
   padding: 10px 20px;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  font-weight: 600;
 }
 
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
   background-color: #66ccff;
-  color: #000000;
-  border-color: #ffffff;
-  box-shadow: 0 0 6px #66ccff;
+  color: #0d0d0d;
+  border-color: #66ccff;
+  box-shadow: 0 0 8px #66ccff;
 }
 
-/* ==========================================================
+/* ---------------------------
    TABLAS
-   ========================================================== */
+   --------------------------- */
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #1a1a1a;
+  color: #dddddd;
 }
 
 table th,
 table td {
-  border: 1px solid #555;
+  border: 1px solid #444;
   padding: 10px;
 }
 
 table th {
-  background-color: #222222;
+  background-color: #2b2b2b;
   color: #ffffff;
 }
 
 table tr:nth-child(even) {
-  background-color: #1a1a1a;
+  background-color: #111111;
 }
 
-/* ==========================================================
+/* ---------------------------
    ENFOQUE ACCESIBLE
-   ========================================================== */
+   --------------------------- */
 :focus {
   outline: 2px solid #66ccff;
   outline-offset: 2px;
 }
 
-/* ==========================================================
+/* ---------------------------
    IMÁGENES
-   ========================================================== */
-img, figure img {
+   --------------------------- */
+img,
+figure img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
-  border: 1px solid #555;
+  border: 1px solid #444;
 }
 
-/* ==========================================================
-   FORMULARIOS Y CAMPOS INPUT
-   ========================================================== */
-input,
-textarea,
-select,
+/* ---------------------------
+   FORMULARIOS EXTRA
+   --------------------------- */
 option {
-  background-color: #111111 !important; /* fondo negro */
-  color: #ffffff !important;           /* texto blanco */
-  border: 1px solid #555 !important;   /* borde fino */
-  border-radius: 4px;
-  padding: 8px;
-  font-size: 1em;
+  background-color: #2b2b2b;
+  color: #ffffff;
 }
 
-/* Placeholder en inputs */
-::placeholder {
-  color: #bbbbbb;  /* texto gris claro para placeholders */
-  opacity: 1;
-}
-
-/* Focus de campos */
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #66ccff !important;
-  box-shadow: 0 0 4px #66ccff !important;
-  outline: none !important;
-}
-
-/* Botones */
-button,
-input[type="submit"],
-input[type="reset"] {
-  background-color: #111111 !important;
-  color: #ffffff !important;
-  border: 1px solid #555 !important;
-  border-radius: 6px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  background-color: #333333 !important;
-  color: #ffffff !important;
-  border-color: #66ccff !important;
-  box-shadow: 0 0 6px #66ccff !important;
-}
