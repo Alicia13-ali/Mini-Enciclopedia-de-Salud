@@ -228,22 +228,21 @@ input[type="reset"]:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #151515;
-  color: #e0e0e0;
+  background-color: #0d0d0d;
+  color: #dddddd;
+  border: 1px solid #333;
 }
-
 th, td {
   border: 1px solid #333;
   padding: 10px;
+  text-align: left;
 }
-
 th {
-  background-color: #1f1f1f;
+  background-color: #1a1a1a;
   color: #ffffff;
 }
-
 tr:nth-child(even) {
-  background-color: #121212;
+  background-color: #141414;
 }
 
 /* ==========================================================
@@ -278,14 +277,50 @@ footer {
 .skip-link {
   position: absolute;
   top: -40px;
-  left: 0;
-  background-color: #ff66cc;
-  color: #000;
-  padding: 8px 16px;
-  z-index: 100;
-  transition: top 0.3s;
+  left: 10px;
+  background-color: #66ccff;
+  color: #0d0d0d;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  outline: 2px solid transparent;
 }
-
 .skip-link:focus {
   top: 10px;
+  outline: 2px solid #ff6ad5;
+  outline-offset: 4px;
+  box-shadow: 0 0 10px #ff6ad5;
+}
+
+main.declaracion {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 30px;
+  background-color: #0d0d0d;
+  color: #dddddd;
+  padding: 40px;
+}
+main.declaracion section {
+  background-color: #1a1a1a;
+  color: #dddddd;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(255,255,255,0.05);
+}
+main.declaracion h2 {
+  color: #99e6ff;
+  border-bottom: 2px solid #66ccff;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: auto;
+  }
+  main.declaracion {
+    grid-template-columns: repeat(2, minmax(300px, 1fr)) !important;
+  }
 }
