@@ -9,14 +9,15 @@
 /* =======================================================
    PALETA DE COLORES (Contraste AA+)
    -------------------------------------------------------
-   #0d0d0d  → Fondo principal
-   #1a1a1a  → Fondo de contenedores
-   #2b2b2b  → Fondo de campos de formulario
-   #2e2e2e  → Elementos interactivos
-   #444444  → Bordes
-   #dddddd  → Texto principal
-   #99e6ff  → Azul resalte (hover/acento)
-   #66ccff  → Azul accesible (foco/acciones)
+   #0d0d0d → Fondo principal
+   #1a1a1a → Fondo de secciones/contenedores
+   #2b2b2b → Campos de formulario
+   #2e2e2e → Elementos interactivos
+   #444444 → Bordes
+   #dddddd → Texto principal
+   #ffffff → Títulos o textos destacados
+   #99e6ff → Azul resalte (hover/acento)
+   #66ccff → Azul foco accesible
    ======================================================= */
 
 /* =======================================================
@@ -73,16 +74,20 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 nav li {
-  margin: 0.4em 0;
+  display: inline-block;
+  margin: 0 0.5em;
 }
 
 nav a {
   display: inline-block;
   padding: 0.4em 0.6em;
   border-radius: 6px;
+  color: #dddddd;
+  background-color: transparent;
 }
 
 nav a:hover, nav a:focus {
@@ -99,25 +104,28 @@ main, section, article, aside {
   border: 1px solid #2e2e2e;
   border-radius: 10px;
   padding: 1.5em;
-  margin: 1em;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  margin: 1.5em auto;
+  max-width: 900px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 /* =======================================================
    FORMULARIOS COMPLETOS EN MODO NOCHE
    ======================================================= */
+
 form {
   background-color: #1a1a1a;
   color: #dddddd;
   border: 1px solid #2e2e2e;
-  border-radius: 10px;
-  padding: 1.5em;
+  border-radius: 12px;
+  padding: 2em;
   margin: 1.5em auto;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
   max-width: 700px;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* Etiquetas */
 label {
   display: block;
   color: #ffffff;
@@ -126,6 +134,7 @@ label {
   margin-bottom: 5px;
 }
 
+/* Campos de texto, numéricos, fechas, etc. */
 input,
 textarea,
 select {
@@ -139,10 +148,12 @@ select {
   transition: all 0.3s ease;
 }
 
+/* Placeholder */
 ::placeholder {
   color: #aaaaaa;
 }
 
+/* Foco accesible */
 input:focus,
 textarea:focus,
 select:focus {
@@ -151,11 +162,24 @@ select:focus {
   outline: none;
 }
 
-/* Checkbox, radio y range */
-input[type="checkbox"],
-input[type="radio"],
+/* Tipos de input específicos */
+input[type="color"] {
+  background-color: #2e2e2e;
+  border: none;
+  height: 40px;
+  width: 60px;
+  cursor: pointer;
+}
+
 input[type="range"] {
+  width: 100%;
   accent-color: #66ccff;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #66ccff;
+  margin-right: 8px;
 }
 
 /* Fieldset y legend */
@@ -173,7 +197,7 @@ legend {
   padding: 0 6px;
 }
 
-/* Texto auxiliar */
+/* Texto de ayuda */
 .ayuda {
   font-size: 0.9em;
   color: #bbbbbb;
