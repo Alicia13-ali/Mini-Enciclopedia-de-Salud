@@ -1,204 +1,150 @@
-/* =========================
-   MODO NOCHE PROFESIONAL 
-   ========================= */
+/* =============
+   MODO NOCHE 
+   ============== */
+
+/* Importar estilo principal */
+@import url("style.css");
 
 /* Importar tipografía accesible */
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Poppins:wght@400;600&display=swap');
 
-/* ==========================================================
-   PALETA PRINCIPAL
-   
-   Fondo principal: #0d0d0d   → negro profundo
-   Fondo contenedores: #151515
-   Campos formulario: #1f1f1f
-   Bordes suaves: #333
-   Texto base: #e0e0e0
-   Texto secundario: #bbbbbb
-   Fucsia acento: #ff66cc
-   Azul metálico acento: #66b2ff
-   ========================================================== */
+/* =============================
+   PALETA Y VARIABLES OSCURAS
+   ============================== */
+:root {
+  --fondo-principal: #0d0d0d;
+  --fondo-contenedor: #151515;
+  --fondo-formulario: #111111;
+  --fondo-campo: #1f1f1f;
+  --borde: #333;
+  --texto-base: #e0e0e0;
+  --texto-secundario: #bbbbbb;
+  --fucsia: #ff66cc;
+  --azul-metalico: #66b2ff;
+}
 
-/* ==========================================================
+/* ===============
    BASE GENERAL
-   ========================================================== */
+   ================= */
 body {
-  background-color: #0d0d0d;
-  color: #e0e0e0;
+  background-color: var(--fondo-principal);
+  color: var(--texto-base);
   font-family: 'Atkinson Hyperlegible', 'Poppins', sans-serif;
-  line-height: 1.7;
-  margin: 0;
-  padding: 0;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1, h2, h3, h4, h5 {
   color: #ffffff;
-  line-height: 1.3;
 }
 
 p, label, span, li {
   color: #dddddd;
 }
 
-/* ==========================================================
+/* ==========
    ENLACES
-   ========================================================== */
+   ========== */
 a {
-  color: #66b2ff;
+  color: var(--azul-metalico);
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
 a:hover, a:focus {
-  color: #ff66cc;
+  color: var(--fucsia);
   outline: none;
 }
 
-/* ==========================================================
+/* ========================
    CABECERA Y NAVEGACIÓN
-   ========================================================== */
+   ======================== */
 header, nav, footer {
-  background-color: #151515;
-  border-bottom: 1px solid #333;
-  color: #e0e0e0;
-  padding: 1em;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0.5em;
+  background-color: var(--fondo-contenedor);
+  border-bottom: 1px solid var(--borde);
+  color: var(--texto-base);
 }
 
 nav a {
-  background-color: #1f1f1f;
-  padding: 8px 14px;
+  background-color: var(--fondo-campo);
+  color: var(--texto-base);
   border-radius: 8px;
-  color: #e0e0e0;
-  transition: 0.3s;
 }
 
 nav a:hover {
   background-color: #2a2a2a;
-  color: #66b2ff;
+  color: var(--azul-metalico);
 }
 
-/* ==========================================================
+/* ==========================
    CONTENEDORES PRINCIPALES
-   ========================================================== */
+   ========================== */
 main, section, article {
-  background-color: #151515;
+  background-color: var(--fondo-contenedor);
   border: 1px solid #222;
   border-radius: 10px;
-  padding: 2em;
-  margin: 2em auto;
-  max-width: 900px;
+  color: var(--texto-base);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
 }
 
-/* ==========================================================
+/* ==============
    FORMULARIOS
-   ========================================================== */
-form {
-  background-color: #111111;
-  color: #e0e0e0;
+   =============== */
+form, .form-profesional {
+  background-color: var(--fondo-formulario);
+  color: var(--texto-base);
   border: 1px solid #222;
   border-radius: 10px;
-  padding: 2em;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.06);
-  width: 100%;
-  max-width: 700px;
-  margin: 2em auto;
 }
 
-/* Etiquetas */
 label {
-  display: block;
-  font-weight: 600;
   color: #ffffff;
-  margin-top: 1em;
-  margin-bottom: 0.3em;
 }
 
-/* Campos de texto */
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  background-color: #1f1f1f;
+input, textarea, select {
+  background-color: var(--fondo-campo);
   color: #ffffff;
-  border: 1px solid #333;
+  border: 1px solid var(--borde);
   border-radius: 6px;
-  font-size: 1em;
-  transition: 0.3s;
-  box-sizing: border-box;
 }
 
-/* Evitar fondos blancos automáticos */
-input[type="date"],
-input[type="number"],
-input[type="email"],
-input[type="text"],
-textarea,
-select {
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-/* Placeholders */
 ::placeholder {
   color: #aaaaaa;
 }
 
-/* Enfoque accesible */
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: #66b2ff;
-  box-shadow: 0 0 6px #66b2ff;
-  outline: none;
+  border-color: var(--azul-metalico);
+  box-shadow: 0 0 6px var(--azul-metalico);
 }
 
-/* Checkbox, radio, range */
 input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
-  accent-color: #ff66cc;
+  accent-color: var(--fucsia);
 }
 
-/* ==========================================================
+/* ===================
    FIELDSET Y LEGEND
-   ========================================================== */
+   =================== */
 fieldset {
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 10px 15px;
-  background-color: #151515;
-  margin-top: 15px;
+  border: 1px solid var(--borde);
+  background-color: var(--fondo-contenedor);
 }
 
 legend {
-  color: #66b2ff;
-  font-weight: 600;
-  padding: 0 6px;
+  color: var(--azul-metalico);
 }
 
-/* ==========================================================
-   BOTONES (Fucsia y Azul Metálico)
-   ========================================================== */
+/* ==========
+   BOTONES
+   ========== */
 button,
 input[type="submit"],
 input[type="reset"] {
-  background: linear-gradient(135deg, #ff66cc, #66b2ff);
+  background: linear-gradient(135deg, var(--fucsia), var(--azul-metalico));
   color: #ffffff;
-  border: none;
   border-radius: 30px;
   padding: 12px 24px;
   font-weight: 600;
@@ -210,37 +156,25 @@ input[type="reset"] {
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  background: linear-gradient(135deg, #66b2ff, #ff66cc);
-  box-shadow: 0 0 10px #ff66cc;
+  background: linear-gradient(135deg, var(--azul-metalico), var(--fucsia));
+  box-shadow: 0 0 10px var(--fucsia);
 }
 
-/* ==========================================================
-   TEXTO DE AYUDA
-   ========================================================== */
-.ayuda {
-  font-size: 0.9em;
-  color: #bbbbbb;
-}
-
-/* ==========================================================
+/* =========
    TABLAS
-   ========================================================== */
+   ======== */
 table {
-  width: 100%;
-  border-collapse: collapse;
   background-color: #111111;
   color: #ffffff;
+  border-collapse: collapse;
 }
 
-table th,
-table td {
+table th, table td {
   border: 1px solid #555;
-  padding: 10px;
 }
 
 table th {
   background-color: #222222;
-  color: #ffffff;
 }
 
 table tr:nth-child(even) {
@@ -251,78 +185,50 @@ table tr:nth-child(even) {
    IMÁGENES
    ========================================================== */
 img, figure img {
-  max-width: 100%;
-  height: auto;
+  border: 1px solid var(--borde);
   border-radius: 8px;
-  border: 1px solid #333;
 }
 
-/* ==========================================================
+/* =================
    PIE DE PÁGINA
-   ========================================================== */
+   ================= */
 footer {
-  border-top: 1px solid #333;
-  text-align: center;
-  padding: 1em;
-  color: #bbbbbb;
+  border-top: 1px solid var(--borde);
+  color: var(--texto-secundario);
   background-color: #111111;
 }
 
-/* ==========================================================
+/* =================================
    ENFOQUE Y ACCESIBILIDAD VISUAL
-   ========================================================== */
+   ================================== */
 :focus {
-  outline: 2px solid #66b2ff;
+  outline: 2px solid var(--azul-metalico);
   outline-offset: 2px;
 }
 
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 10px;
   background-color: #66ccff;
   color: #0d0d0d;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  outline: 2px solid transparent;
 }
 .skip-link:focus {
-  top: 10px;
-  outline: 2px solid #ff6ad5;
-  outline-offset: 4px;
   box-shadow: 0 0 10px #ff6ad5;
 }
 
+/* =================================
+   PÁGINA DECLARACIÓN ACCESIBILIDAD
+   ================================== */
 main.declaracion {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 30px;
-  background-color: #0d0d0d;
-  color: #dddddd;
-  padding: 40px;
+  background-color: var(--fondo-principal);
+  color: var(--texto-base);
 }
+
 main.declaracion section {
   background-color: #1a1a1a;
+  border: 1px solid var(--borde);
   color: #dddddd;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 6px rgba(255,255,255,0.05);
 }
+
 main.declaracion h2 {
   color: #99e6ff;
   border-bottom: 2px solid #66ccff;
-  padding-bottom: 8px;
-  margin-bottom: 10px;
-}
-@media (max-width: 600px) {
-  html, body {
-    overflow-x: auto;
-  }
-  main.declaracion {
-    grid-template-columns: repeat(2, minmax(300px, 1fr)) !important;
-  }
 }
