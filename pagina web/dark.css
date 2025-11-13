@@ -1,0 +1,234 @@
+/* =============
+   MODO NOCHE 
+   ============== */
+
+/* Importar estilo principal */
+@import url("style.css");
+
+/* Importar tipografía accesible */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Poppins:wght@400;600&display=swap');
+
+/* =============================
+   PALETA Y VARIABLES OSCURAS
+   ============================== */
+:root {
+  --fondo-principal: #0d0d0d;
+  --fondo-contenedor: #151515;
+  --fondo-formulario: #111111;
+  --fondo-campo: #1f1f1f;
+  --borde: #333;
+  --texto-base: #e0e0e0;
+  --texto-secundario: #bbbbbb;
+  --fucsia: #ff66cc;
+  --azul-metalico: #66b2ff;
+}
+
+/* ===============
+   BASE GENERAL
+   ================= */
+body {
+  background-color: var(--fondo-principal);
+  color: var(--texto-base);
+  font-family: 'Atkinson Hyperlegible', 'Poppins', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+}
+
+p, label, span, li {
+  color: #dddddd;
+}
+
+/* ==========
+   ENLACES
+   ========== */
+a {
+  color: var(--azul-metalico);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: var(--fucsia);
+  outline: none;
+}
+
+/* ========================
+   CABECERA Y NAVEGACIÓN
+   ======================== */
+header, nav, footer {
+  background-color: var(--fondo-contenedor);
+  border-bottom: 1px solid var(--borde);
+  color: var(--texto-base);
+}
+
+nav a {
+  background-color: var(--fondo-campo);
+  color: var(--texto-base);
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background-color: #2a2a2a;
+  color: var(--azul-metalico);
+}
+
+/* ==========================
+   CONTENEDORES PRINCIPALES
+   ========================== */
+main, section, article {
+  background-color: var(--fondo-contenedor);
+  border: 1px solid #222;
+  border-radius: 10px;
+  color: var(--texto-base);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+/* ==============
+   FORMULARIOS
+   =============== */
+form, .form-profesional {
+  background-color: var(--fondo-formulario);
+  color: var(--texto-base);
+  border: 1px solid #222;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.06);
+}
+
+label {
+  color: #ffffff;
+}
+
+input, textarea, select {
+  background-color: var(--fondo-campo);
+  color: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+}
+
+::placeholder {
+  color: #aaaaaa;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--azul-metalico);
+  box-shadow: 0 0 6px var(--azul-metalico);
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  accent-color: var(--fucsia);
+}
+
+/* ===================
+   FIELDSET Y LEGEND
+   =================== */
+fieldset {
+  border: 1px solid var(--borde);
+  background-color: var(--fondo-contenedor);
+}
+
+legend {
+  color: var(--azul-metalico);
+}
+
+/* ==========
+   BOTONES
+   ========== */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: linear-gradient(135deg, var(--fucsia), var(--azul-metalico));
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: linear-gradient(135deg, var(--azul-metalico), var(--fucsia));
+  box-shadow: 0 0 10px var(--fucsia);
+}
+
+/* =========
+   TABLAS
+   ======== */
+table {
+  background-color: #111111;
+  color: #ffffff;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #555;
+}
+
+table th {
+  background-color: #222222;
+}
+
+table tr:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+/* ==========================================================
+   IMÁGENES
+   ========================================================== */
+img, figure img {
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+}
+
+/* =================
+   PIE DE PÁGINA
+   ================= */
+footer {
+  border-top: 1px solid var(--borde);
+  color: var(--texto-secundario);
+  background-color: #111111;
+}
+
+/* =================================
+   ENFOQUE Y ACCESIBILIDAD VISUAL
+   ================================== */
+:focus {
+  outline: 2px solid var(--azul-metalico);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  background-color: #66ccff;
+  color: #0d0d0d;
+}
+.skip-link:focus {
+  box-shadow: 0 0 10px #ff6ad5;
+}
+
+/* =================================
+   PÁGINA DECLARACIÓN ACCESIBILIDAD
+   ================================== */
+main.declaracion {
+  background-color: var(--fondo-principal);
+  color: var(--texto-base);
+}
+
+main.declaracion section {
+  background-color: #1a1a1a;
+  border: 1px solid var(--borde);
+  color: #dddddd;
+}
+
+main.declaracion h2 {
+  color: #99e6ff;
+  border-bottom: 2px solid #66ccff;
+}
