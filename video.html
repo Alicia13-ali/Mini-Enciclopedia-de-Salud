@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vídeo Accesible – Alimentación Saludable</title>
+</head>
+<body>
+  <h1>Vídeo Accesible: Alimentación Saludable</h1>
+
+  <!-- VÍDEO DESDE YOUTUBE -->
+  <section id="youtube">
+    <h2>Versión YouTube</h2>
+    <p>Vídeo subido a YouTube con subtítulos en español e inglés.</p>
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/GUozOfQ638U"
+      title="Vídeo accesible sobre alimentación saludable"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <hr>
+
+  <!-- VÍDEO HTML5 LOCAL -->
+  <section id="video">
+    <h2>Versión HTML5</h2>
+    <p>Reproductor de vídeo HTML5 con subtítulos locales.</p>
+    <video width="640" height="360" controls>
+      <source src="media/video.mp4" type="video/mp4">
+      <track src="media/subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español" default>
+      <track src="media/subtitulos_en.vtt" kind="subtitles" srclang="en" label="English">
+      Tu navegador no soporta el elemento <code>video</code>.
+    </video>
+  </section>
+
+  <hr>
+
+  <!-- VÍDEO CON AMARA -->
+  <section id="amara">
+    <h2>Versión Amara</h2>
+    <p>Vídeo con subtítulos gestionados desde la plataforma Amara.</p>
+    <div class="amara-embed" data-url="http://www.youtube.com/watch?v=GUozOfQ638U" data-team="null"></div>
+    <script type="text/javascript" src="https://amara.org/embedder-iframe"></script>
+  </section>
+
+  <hr>
+
+  <!-- ENLACES A TRANSCRIPCIONES -->
+  <section id="transcripciones">
+    <h2>Transcripciones</h2>
+    <ul>
+      <li><a href="transcripciones/transcripcion_basica_es.txt" download>Transcripción básica (ES)</a></li>
+      <li><a href="transcripciones/transcripcion_basica_en.txt" download>Basic transcript (EN)</a></li>
+      <li><a href="transcripciones/transcripcion_completa_es.txt" download>Transcripción completa (ES)</a></li>
+    </ul>
+  </section>
+
+</body>
+</html>
+
