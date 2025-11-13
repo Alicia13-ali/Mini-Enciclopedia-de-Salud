@@ -23,17 +23,25 @@
   <hr>
 
   <!-- VÍDEO HTML5 LOCAL -->
+  
   <section id="video">
-    <h2>Versión HTML5</h2>
-    <p>Reproductor de vídeo HTML5 con subtítulos locales.</p>
-    <video width="640" height="360" controls>
-      <source src="media/video.mp4" type="video/mp4">
-      <track src="media/subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español" default>
-      <track src="media/subtitulos_en.vtt" kind="subtitles" srclang="en" label="English">
-    </video>
-  </section>
+  <h2>Versión HTML5</h2>
+  <p>Reproductor de vídeo HTML5 con subtítulos locales.</p>
+  <video width="640" height="360" controls>
+    <!-- Fuentes de vídeo -->
+    <source src="media/video.mp4" type="video/mp4">
+    <source src="media/video.ogg" type="video/ogg">
 
-  <hr>
+    <!-- Subtítulos en español e inglés -->
+    <track src="media/subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español" default>
+    <track src="media/subtitulos_en.vtt" kind="subtitles" srclang="en" label="English">
+
+    <!-- Mensaje alternativo si el navegador no soporta vídeo -->
+    Tu navegador no soporta el elemento <code>video</code>.
+  </video>
+</section>
+
+<hr>
 
   <!-- VÍDEO CON AMARA -->
   <section id="amara">
