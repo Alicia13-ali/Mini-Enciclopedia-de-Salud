@@ -9,15 +9,16 @@
    VARIABLES DE COLOR Y FUENTE
    ========================================================== */
 :root {
-  --azul-suave: #b3e5fc;
-  --azul-claro: #e1f5fe;
-  --rosa-suave: #f8bbd0;
-  --rosa-claro: #fce4ec;
-  --gris-texto: #333;
-  --blanco: #fff;  
-  --sombra: rgba(0, 0, 0, 0.1);
+  --azul-suave: #8cc7e8;      /* antes #b3e5fc (muy claro) */
+  --azul-claro: #c8e7f4;      /* antes #e1f5fe */
+  --rosa-suave: #eaa1bb;      /* antes #f8bbd0 */
+  --rosa-claro: #f5c7d6;      /* antes #fce4ec */
+  --gris-texto: #222;         /* más oscuro para mejor contraste */
+  --blanco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.15);
   --fuente: 'Poppins', sans-serif;
 }
+
 
 /* ==========================================================
    ESTILO GENERAL
