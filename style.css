@@ -106,15 +106,20 @@ nav li {
 
 nav a {
   background-color: var(--blanco);
+  color: #004d61;                       /* Azul oscuro accesible */
   padding: 8px 14px;
   border-radius: 20px;
   box-shadow: 0 1px 3px var(--sombra);
+  font-weight: bold;                    /* Aumenta legibilidad */
   transition: 0.3s;
 }
 
 nav a:hover {
-  background-color: var(--rosa-suave);
+  background-color: #cddfe7;            /* Un azul suave con buen contraste */
+  color: #003447;                       /* Más oscuro aún */
 }
+
+
 
 /* ==========================================================
    SKIP LINK (ENLACE ACCESIBLE)
