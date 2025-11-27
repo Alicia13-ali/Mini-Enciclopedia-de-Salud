@@ -36,10 +36,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #006994;
 }
 
-a {
-  color: #e91e63;
-  text-decoration: none;
-}
 
 a:hover {
   text-decoration: underline;
@@ -431,3 +427,24 @@ footer a:hover {
     border: 0;
 }
 
+/* ==========================================================
+   ENLACES GENERALES ACCESIBLES EN EL CONTENIDO
+   ========================================================== */
+
+main a,
+section a,
+aside a,
+article a {
+  color: #004d61;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+main a:hover,
+section a:hover,
+aside a:hover,
+article a:hover {
+  color: #003447;
+  text-decoration: underline;
+}
