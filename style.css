@@ -181,7 +181,8 @@ aside {
 }
 
 aside h4 {
-  color: #0077b6;
+  color: #004d61;    /* azul oscuro accesible  */
+  font-weight: bold;
 }
 
 article {
