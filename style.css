@@ -9,16 +9,15 @@
    VARIABLES DE COLOR Y FUENTE
    ========================================================== */
 :root {
-  --azul-suave: #8cc7e8;      /* antes #b3e5fc (muy claro) */
-  --azul-claro: #c8e7f4;      /* antes #e1f5fe */
-  --rosa-suave: #eaa1bb;      /* antes #f8bbd0 */
-  --rosa-claro: #f5c7d6;      /* antes #fce4ec */
-  --gris-texto: #222;         /* más oscuro para mejor contraste */
-  --blanco: #ffffff;
-  --sombra: rgba(0, 0, 0, 0.15);
+  --azul-suave: #b3e5fc;
+  --azul-claro: #e1f5fe;
+  --rosa-suave: #f8bbd0;
+  --rosa-claro: #fce4ec;
+  --gris-texto: #333;
+  --blanco: #fff;  
+  --sombra: rgba(0, 0, 0, 0.1);
   --fuente: 'Poppins', sans-serif;
 }
-
 
 /* ==========================================================
    ESTILO GENERAL
@@ -33,9 +32,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #006994;
+  color: #000000;
 }
 
+a {
+  color: #e91e63;
+  text-decoration: none;
+}
 
 a:hover {
   text-decoration: underline;
@@ -102,20 +105,15 @@ nav li {
 
 nav a {
   background-color: var(--blanco);
-  color: #004d61;                       /* Azul oscuro accesible */
   padding: 8px 14px;
   border-radius: 20px;
   box-shadow: 0 1px 3px var(--sombra);
-  font-weight: bold;                    /* Aumenta legibilidad */
   transition: 0.3s;
 }
 
 nav a:hover {
-  background-color: #cddfe7;            /* Un azul suave con buen contraste */
-  color: #003447;                       /* Más oscuro aún */
+  background-color: var(--rosa-suave);
 }
-
-
 
 /* ==========================================================
    SKIP LINK (ENLACE ACCESIBLE)
@@ -181,8 +179,7 @@ aside {
 }
 
 aside h4 {
-  color: #004d61;    /* azul oscuro accesible  */
-  font-weight: bold;
+  color: #0077b6;
 }
 
 article {
@@ -193,9 +190,9 @@ article {
   box-shadow: 0 1px 3px var(--sombra);
 }
 
-/* ============
-   FORMULARIO 
-   ============ */
+/* ==========================================================
+   FORMULARIO PROFESIONAL REUTILIZABLE
+   ========================================================== */
 .form-profesional {
   background-color: var(--blanco);       /* fondo neutro */
   padding: 25px 30px;                     /* espacio interior cómodo */
@@ -256,16 +253,16 @@ article {
 .form-profesional input:focus,
 .form-profesional textarea:focus,
 .form-profesional select:focus {
-  border-color: #e91e63;                  /* rosa intenso para enfoque */
+  border-color: #9B0F4B;                  /* rosa intenso para enfoque */
   outline: none;
-  box-shadow: 0 0 4px #e91e63;
+  box-shadow: 0 0 4px #9B0F4B;
 }
 
 /* Botones */
 .form-profesional button,
 .form-profesional input[type="submit"],
 .form-profesional input[type="reset"] {
-  background-color: #c2185b;  /* rosa accesible */
+  background-color: #9B0F4B;              /* rosa principal */
   color: #fff;
   font-weight: bold;
   border: none;
@@ -283,7 +280,6 @@ article {
   background-color: #006994;              /* azul fuerte al pasar el cursor */
   color: #fff;
 }
-
 
 
 
@@ -306,13 +302,12 @@ table th, table td {
 }
 
 table th {
-  background-color: var(--rosa-suave); /* rosa pastel existente */
-  color: #004d61;                      /* azul oscuro accesible */
-  font-weight: bold;
+  background-color: var(--rosa-suave);
+  color: var(--blanco);
 }
 
 table tr:nth-child(even) {
-  background-color: #f0b9ca;           /* rosa ligeramente más oscuro */
+  background-color: var(--rosa-claro);
 }
 
 table caption {
@@ -428,26 +423,4 @@ footer a:hover {
     width: 100%;
     height: 100%;
     border: 0;
-}
-
-/* ==========================================================
-   ENLACES GENERALES ACCESIBLES EN EL CONTENIDO
-   ========================================================== */
-
-main a,
-section a,
-aside a,
-article a {
-  color: #004d61;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-main a:hover,
-section a:hover,
-aside a:hover,
-article a:hover {
-  color: #003447;
-  text-decoration: underline;
 }
