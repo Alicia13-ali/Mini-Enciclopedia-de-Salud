@@ -37,11 +37,30 @@
       <label for="causas">Causas:</label><br>
       <input type="text" id="causas" name="causas" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+"><br><br>
 
-      <label>Síntomas (puede seleccionar varios):</label><br>
-		<input type="checkbox" name="sintomas" value="fiebre"> Fiebre<br>
-		<input type="checkbox" name="sintomas" value="vomito"> Vómito<br>
-		<input type="checkbox" name="sintomas" value="diarrea"> Diarrea<br>
-		<input type="checkbox" name="sintomas" value="dolor_muscular"> Dolor muscular<br>
+      <fieldset>
+  <legend>Síntomas (puede seleccionar varios):</legend>
+  
+  <label for="sintomas_fiebre">
+    <input type="checkbox" id="sintomas_fiebre" name="sintomas" value="fiebre">
+    Fiebre
+  </label><br>
+
+  <label for="sintomas_vomito">
+    <input type="checkbox" id="sintomas_vomito" name="sintomas" value="vomito">
+    Vómito
+  </label><br>
+
+  <label for="sintomas_diarrea">
+    <input type="checkbox" id="sintomas_diarrea" name="sintomas" value="diarrea">
+    Diarrea
+  </label><br>
+
+  <label for="sintomas_dolor_muscular">
+    <input type="checkbox" id="sintomas_dolor_muscular" name="sintomas" value="dolor_muscular">
+    Dolor muscular
+  </label>
+</fieldset>
+
 
       <br><br>
 
